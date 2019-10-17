@@ -15,9 +15,9 @@
 % enables to use \\ in the command \@authoraddr, so command is deprecated \secondauthoraddr
 %   
 
-\setlength\columnsep{0.4cm}
+\setlength\columnsep{0.5cm}
 \newlength\titlebox
-\setlength\titlebox{4.9cm}
+\setlength\titlebox{5cm}
 \thispagestyle{empty}
 \pagestyle{empty}
 
@@ -48,9 +48,7 @@
 \author{
 \begin{large}
   \begin{tabular}{c}
-  \bf{\@authorname}\\[5mm]
-  \@authoraddr
-  \makesecondauthoraddr
+  {\@authorname}\\[5mm]
   \end{tabular}
 \end{large}
 }
@@ -58,7 +56,7 @@
 \def\@maketitle{
   \begin{center}
     \LARGE{\bf\@title}
-    \vskip 9mm
+    \vskip 5mm
     \@author
   \end{center}
 }
