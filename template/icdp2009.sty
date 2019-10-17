@@ -1,0 +1,90 @@
+% File icdp2009.sty
+% This is the LaTeX style file for ICDP 2009.  It is adapted from the IE 2007 style.
+
+% July 24, 2009
+% Contact: simonnet@ecole.ensicaen.fr
+
+% September 03, 2009
+% version: 1.1
+% author: simonnet 
+% add command to have one or two affiliations  
+%
+% September 11, 2009
+% version: 1.2
+% author: simonnet 
+% enables to use \\ in the command \@authoraddr, so command is deprecated \secondauthoraddr
+%   
+
+\setlength\columnsep{0.4cm}
+\newlength\titlebox
+\setlength\titlebox{4.9cm}
+\thispagestyle{empty}
+\pagestyle{empty}
+
+\flushbottom \twocolumn \sloppy %
+
+\def\addcontentsline#1#2#3{}
+
+\def\maketitle{\par
+ \begingroup
+ \def\thefootnote{\fnsymbol{footnote}}
+ \def\@makefnmark{\hbox to 0pt{$^{\@thefnmark}$\hss}}
+ \if@twocolumn
+   \twocolumn[\@maketitle]
+ \else
+   \global\@topnum\z@
+   \@maketitle
+ \fi
+ \@thanks
+ \endgroup
+ \setcounter{footnote}{0}
+ \let\maketitle\relax
+ \let\@maketitle\relax
+ }
+
+\def\authorname#1{\gdef\@authorname{#1}}
+\gdef\@authorname{Author}
+
+\author{
+\begin{large}
+  \begin{tabular}{c}
+  \bf{\@authorname}\\[5mm]
+  \@authoraddr
+  \makesecondauthoraddr
+  \end{tabular}
+\end{large}
+}
+
+\def\@maketitle{
+  \begin{center}
+    \LARGE{\bf\@title}
+    \vskip 9mm
+    \@author
+  \end{center}
+}
+
+\renewcommand{\abstract}{\section*{Abstract}}
+\newcommand{\keywords}{\paragraph{Keywords:}}
+\newcommand{\acknowledgements}{\section*{Acknowledgements}}
+
+\def\section{\@startsection {section}{1}{\z@}{-3.0ex plus
+    -0.5ex minus -.2ex}{1.7ex plus 0.3ex minus .2ex}{\large\bf\raggedright}}
+\def\subsection{\@startsection{subsection}{2}{\z@}{-3.0ex plus
+    -0.5ex minus -.2ex}{1.7ex plus .2ex}{\normalsize\bf\raggedright}}
+\def\subsubsection{\@startsection{subsubsection}{3}{\z@}{-3.0 ex plus
+   -0.5ex minus -.2ex}{1.7ex plus .2ex}{\normalsize\bf\raggedright}}
+\def\paragraph{\@startsection{paragraph}{4}{\z@}{1.5ex plus
+   0.5ex minus .2ex}{-1em}{\normalsize\bf}}
+\def\subparagraph{\@startsection{subparagraph}{5}{\parindent}{1.5ex plus
+   0.5ex minus .2ex}{-1em}{\normalsize\bf}}
+
+\def\@normalsize{\@setsize\normalsize{10pt}\xpt\@xpt}
+\def\small{\@setsize\small{9pt}\ixpt\@ixpt}
+\def\footnotesize{\@setsize\footnotesize{9pt}\ixpt\@ixpt}
+\def\scriptsize{\@setsize\scriptsize{8pt}\viipt\@viipt}
+\def\tiny{\@setsize\tiny{7pt}\vipt\@vipt}
+\def\large{\@setsize\large{12pt}\xiipt\@xiipt}
+\def\Large{\@setsize\Large{14pt}\xivpt\@xivpt}
+\def\LARGE{\@setsize\LARGE{18pt}\xviipt\@xviipt}
+\def\huge{\@setsize\huge{23pt}\xxpt\@xxpt}
+\def\Huge{\@setsize\Huge{28pt}\xxvpt\@xxvpt}
