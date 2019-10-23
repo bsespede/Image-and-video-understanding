@@ -21,7 +21,8 @@ def labels_to_falsecolor(labels, cmap_name='viridis'):
 
 def plot_slider_sequence(sequence, window_title="Output"):
     def on_trackbar(val):
-        cv2.imshow(window_title, sequence[:,:,int(val),::-1])
+        img=cv2.rectangle(sequence[:,:,int(val),::-1], (boundinboxes[int(val)][0:2]), (boundinboxes[int(val)][2:4]), (0,0,255), thickness=3)
+        cv2.imshow(window_title, img)
 
     cv2.namedWindow(window_title)
     cv2.createTrackbar("Images", window_title, 0, sequence.shape[2], on_trackbar)
