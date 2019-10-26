@@ -19,17 +19,17 @@
 
 \section{Topic and data}
 
-In this project we aim to accurately classify different styles of diving performed by platforms divers. In platform diving the performances are composed by three main stages: takeoff, flight, and entry. In this work we will restrict ourselves to detecting the style of flight, which can be classified into three distinct types (shown in Figure \ref{fig:dive-styles}) and a fourth "free" style composed by the other three.
+In this KU we will implement a convolutional network capable of classifying video recordings of different styles of platform diving. In platform diving the performances are composed by three main stages: takeoff, flight, and entry. The flight stage is the one where the diver is on the air and can be sub-classified into the three distinct types shown in Figure \ref{fig:dive-styles} (and a fourth "free" style composed by a combination of the other three). During the jump the performer is expected to do somersaults using these positions. Furthermore, the diver might perform twists when switching between styles in a single dive.
 
 \begin{figure}[!htb]
 \center{\includegraphics[scale=0.98]
 {figures/dives.png}}
-\caption{\label{fig:dive-styles} The figure shows the three main flight styles: pike, tuck, and straight respectively.}
+\caption{\label{fig:dive-styles} The figure shows the three main flight styles from left to right: pike, tuck, and straight.}
 \end{figure}
 
-Our goal is to use spatio-temporal volumes to extract features that will then be used to train a convolutional neural network. This network will be used to classify previously unseen videos. Special importance will be placed in aggregating temporal data to solve possible short-term conflicts during the classification process, as the "pike" and "tuck" position can be confused for each other in certain angles. To train our network we plan to use the \textit{Diving48} dataset \cite{ref-diving48} which contains a large number of recordings from a variety of angles. All the videos in this dataset contain ground-truth labels that describe the sequence in four ways: (i) the type of takeoff, (ii) the number of somersaults, (iii) the number of twists, and (iv) the style of flight.
+Our goal is to use spatio-temporal volumes to extract features that will then be used to train a convolutional neural network. This network will be used to classify previously unseen videos. Special importance will be placed in aggregating temporal data to solve possible short-term conflicts during the classification process, as the "pike" and "tuck" position can be easily miss-labeled in certain angles. To train our network we plan to use the \textit{Diving48} dataset \cite{ref-diving48} which contains a large number of recordings from a variety of angles. All the videos in this dataset contain ground-truth labels that describe the sequence in four ways: (i) takeoff type, (ii) the number of somersaults, (iii) the number of twists, and (iv) the flight style.
 
-To simplify the extent of our work, we will remove the "free" flight style  from the dataset (i.e. the style where the performer combines several styles in one dive). Furthermore, we will clip the recordings to remove the parts where the performer sinks below the water. As a last preprocessing step, we will remove the performances with extreme camera angles. Afterwards, we will use the spatio-temporal volumes to extract features of interest (possibly legs and torso, as they can be easily segmented due to the separation provided by the swim trunk). Said features are represented as masks overlayed to the original video.
+To simplify the extent of our work we have decided to make certain restrictions to the original dataset. First, we will remove the "free" flight style from the dataset (i.e. the style where the performer combines several styles in one dive). Furthermore, we will clip the recordings to remove the parts where the performer sinks below the water, as the STV's break when doing so. As a last preprocessing step, we will remove the performances with extreme camera angles and twists in them. The intention behind these modifications is to allow us to focus exclusively on flight style classification while keeping it challenging enough.
 
 \section{Envisioned solution}
 
