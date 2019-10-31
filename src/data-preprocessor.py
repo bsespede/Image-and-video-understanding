@@ -3,9 +3,9 @@ import os
 import shutil
 import cv2
 
-def process_video(vid_name, start_frame, end_frame):
+def process_video(label, vid_name, start_frame, end_frame):
     print('preparing video ' + vid_name + ", start: " + str(start_frame) + ", end: " + str(end_frame))
-    video_path = os.path.join(parsed_videos_path, vid_name)
+    video_path = os.path.join(parsed_videos_path, str(label) + '_' + vid_name)
     frames_path = os.path.join(video_path, "frames")
     flow_path = os.path.join(video_path, "opticalflow")
     original_video_file = os.path.join(videos_path, vid_name + ".mp4")
@@ -29,13 +29,13 @@ def process_video(vid_name, start_frame, end_frame):
 
 def process_jsons():
     # get the list of classes
-    with open(vocab_json_path) as vocab_json:
-        vocab_data = json.load(vocab_json)
-        vocab_id = 0
-        for elem in vocab_data:
-            if 'Dive' in elem and 'NoTwis' in elem:
-                labels.append(vocab_id)
-            vocab_id += 1
+    # with open(vocab_json_path) as vocab_json:
+    #     vocab_data = json.load(vocab_json)
+    #     vocab_id = 0
+    #     for elem in vocab_data:
+    #         if 'Dive' in elem and 'NoTwis' in elem:
+    #             labels.append(vocab_id)
+    #         vocab_id += 1
     # get the list of videos of our class
     with open(training_json_path) as vocab_json:
         vocab_data = json.load(vocab_json)
@@ -45,11 +45,11 @@ def process_jsons():
                 vid_name = elem['vid_name']
                 start_frame = int(elem['start_frame'])
                 end_frame = int(elem['end_frame'])
-                process_video(vid_name, start_frame, end_frame)
+                process_video(elem['label'], vid_name, start_frame, end_frame)
             total_videos += 1
 
 
-labels = []
+labels = [ 12, 13, 19, 35, 36, 46, 47 ]
 directory = os.path.dirname(__file__)
 vocab_json_path = os.path.join(directory, "Diving48_vocab.json")
 training_json_path = os.path.join(directory, "Diving48_train.json")
