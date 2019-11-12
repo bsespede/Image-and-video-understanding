@@ -1,0 +1,42 @@
+* [/] Data selection & formatting
+** TODO choose 50 videos from each class with regard to:
+   - proper perspective
+   - proper pose
+   - proper resolution/focus/contrast
+** TODO extract in-air frames and prepare folder structure as required by Filip Ilic
+* [0/3] Data preprocessing
+** TODO Load pkl files from Filip Ilic
+** TODO crop frame sequence to the actual pose
+** TODO Artefact removal												:TBD:
+*** Morphological: erosion/opening
+* [0/5] Feature extraction and token selection
+** TODO Find 3 largest (by volume) STVs									:TBD:
+** TODO extract contours framewise
+** TODO compute bounding box (MBR) framewise
+** [0/1] for each selected STV, framewise:
+*** TODO fit MBR to STV
+*** [0/6] extract scalar features:
+**** TODO Absolute orientation angle
+**** TODO Fill factor w.r.t. bounding box
+**** TODO Distance to center of bounding box
+**** TODO Bearing angle from center of bounding box to center of MBR
+**** TODO elongation or aspect ratio
+**** TODO compactness
+** TODO transformation of all angle features
+   - modulo pi
+   - compute cosine
+   - compute sine *2 -1
+** TODO scale all features to range [-1;1]
+* [0/1] Feature space filtering											:TBD:
+** TODO median filter on individual features
+* [0/2] Classification
+** TODO Conventional ML
+*** TODO Support Vector Machine
+**** autotrain with availible kernel functions
+*** TODO k-Nearest-Neighbors
+** TODO Neural Networks													:TBD:
+*** Data loading & handling
+**** do random train/test set split up and sequential batch extraction for variable size, OR:
+* [0/2] Evaluation
+** TODO Test accuracy of each class
+** TODO Confusion matrix
