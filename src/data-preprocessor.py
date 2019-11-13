@@ -49,11 +49,11 @@ def process_jsons():
             total_videos += 1
 
 
-labels = [ 12, 13, 19, 35, 36, 46, 47 ]
+labels = [12, 13, 19, 35, 36, 46, 47]
 directory = os.path.dirname(__file__)
 vocab_json_path = os.path.join(directory, "Diving48_vocab.json")
 training_json_path = os.path.join(directory, "Diving48_train.json")
-videos_path = os.path.join(directory, "videos-diving")
-parsed_videos_path = os.path.join(directory, "parsed-videos")
+videos_path = os.path.join(directory, "Diving48_rgb/rgb")
+parsed_videos_path = os.path.join(directory, "Diving48_selection")
 os.mkdir(parsed_videos_path)
 process_jsons()
