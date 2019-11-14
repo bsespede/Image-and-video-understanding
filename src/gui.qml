@@ -3,13 +3,40 @@ import QtQuick.Controls 2.13
 import QtQuick.Layouts 1.13
 import QtMultimedia 5.13
 
-Rectangle {
-    id: mainWindow
+ApplicationWindow {
+    id: root
+    title: qsTr("[IVU] Video classification")
     width: 660
     height: 680
     color: "white"
+    visible: true
 
-    Component.onCompleted: videoPlayer.pause()
+    signal nextVideo(int actionFirst, int actionSecond, int videoFirst, int videoSecond)
+
+    function loadNextVideo(videoName, styleName) {
+        flightStyle.text = styleName;
+        videoPlayer.source = videoName;
+        videoPlayer.pause();
+        videoTimer.restart();
+    }
+
+    Timer {
+        id: videoTimer
+        interval: 100
+        running: false
+
+        onTriggered: {
+            actionSlider.from = 0;
+            actionSlider.to = videoPlayer.duration;
+            actionSlider.first.value = 0;
+            actionSlider.second.value = videoPlayer.duration;
+
+            videoSlider.from = 0;
+            videoSlider.to = videoPlayer.duration;
+            videoSlider.first.value = 0;
+            videoSlider.second.value = videoPlayer.duration;
+        }
+    }
 
     ColumnLayout{
         anchors.margins:10
@@ -37,6 +64,8 @@ Rectangle {
 
             Text {
                 text: "Action range:"
+                Layout.minimumWidth: 100
+                Layout.maximumWidth: 100
             }
 
             RangeSlider {
@@ -56,6 +85,8 @@ Rectangle {
 
             Text {
                 text: "Video range:"
+                Layout.minimumWidth: 100
+                Layout.maximumWidth: 100
             }
 
             RangeSlider {
@@ -75,6 +106,7 @@ Rectangle {
             id: nextBtn
             text: "Next video"
             Layout.fillWidth: true
+            onClicked: root.nextVideo(actionSlider.first.value, actionSlider.second.value, videoSlider.first.value, videoSlider.second.value)
         }
     }
 }
