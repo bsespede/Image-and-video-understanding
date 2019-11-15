@@ -5,15 +5,15 @@ import QtMultimedia 5.13
 
 ApplicationWindow {
     id: root
-    title: qsTr("[IVU] Video classification")
+    title: qsTr("Video annotation tool")
     width: 660
     height: 680
-    color: "white"
     visible: true
 
-    signal nextVideo(int actionFirst, int actionSecond, int videoFirst, int videoSecond)
+    signal setResult(double actionFirst, double actionSecond, double videoFirst, double videoSecond)
+    signal getNextVideo()
 
-    function loadNextVideo(videoName, styleName) {
+    function setNextVideo(videoName, styleName) {
         flightStyle.text = styleName;
         videoPlayer.source = videoName;
         videoPlayer.pause();
@@ -26,22 +26,26 @@ ApplicationWindow {
         running: false
 
         onTriggered: {
+            actionSlider.enabled = true
+            videoSlider.enabled = true
+            discardBtn.enabled = true
+            nextBtn.enabled = true
+
             actionSlider.from = 0;
-            actionSlider.to = videoPlayer.duration;
             actionSlider.first.value = 0;
+            actionSlider.to = videoPlayer.duration;
             actionSlider.second.value = videoPlayer.duration;
 
             videoSlider.from = 0;
-            videoSlider.to = videoPlayer.duration;
             videoSlider.first.value = 0;
+            videoSlider.to = videoPlayer.duration;
             videoSlider.second.value = videoPlayer.duration;
         }
     }
 
     ColumnLayout{
-        anchors.margins:10
+        anchors.margins: 10
         anchors.fill: parent
-        spacing: 10
 
         Text {
             id: flightStyle
@@ -55,7 +59,6 @@ ApplicationWindow {
             id: videoPlayer
             width: 640
             height: 480
-            source: "video.mp4"
             fillMode: VideoOutput.Stretch
             autoPlay: false
         }
@@ -102,11 +105,44 @@ ApplicationWindow {
             }
         }
 
-        Button {
-            id: nextBtn
-            text: "Next video"
-            Layout.fillWidth: true
-            onClicked: root.nextVideo(actionSlider.first.value, actionSlider.second.value, videoSlider.first.value, videoSlider.second.value)
+        RowLayout {
+            spacing: 10
+
+            Button {
+                id: discardBtn
+                text: "Discard video"
+                Layout.fillWidth: true
+                onClicked:
+                {
+                    actionSlider.enabled = false
+                    videoSlider.enabled = false
+                    discardBtn.enabled = false
+                    nextBtn.enabled = false
+
+                    root.getNextVideo()
+                }
+            }
+
+            Button {
+                id: nextBtn
+                text: "Next video"
+                Layout.fillWidth: true
+                onClicked:
+                {
+                    var actionFirstPercentage = actionSlider.first.value / videoPlayer.duration
+                    var actionSecondPercentage = actionSlider.second.value / videoPlayer.duration
+                    var videoFirstPercentage = videoSlider.first.value / videoPlayer.duration
+                    var videoSecondPercentage = videoSlider.second.value / videoPlayer.duration
+
+                    actionSlider.enabled = false
+                    videoSlider.enabled = false
+                    discardBtn.enabled = false
+                    nextBtn.enabled = false
+
+                    root.setResult(actionFirstPercentage, actionSecondPercentage, videoFirstPercentage, videoSecondPercentage)
+                    root.getNextVideo()
+                }
+            }
         }
     }
 }

@@ -1,68 +1,105 @@
 import sys
 import json
 import os
+import shutil
+import cv2
 
 from PySide2.QtCore import QUrl, Slot
 from PySide2.QtWidgets import QApplication
 from PySide2.QtQml import QQmlApplicationEngine
 
-@Slot(int, int, int, int)
-def nextVideoClicked(actionFirst, actionSecond, videoFirst, videoSecond):
-    global _curVideo, _results, _inputs, _window
 
+@Slot(float, float, float, float)
+def setResult(actionFirstPercentage, actionSecondPercentage, videoFirstPercentage, videoSecondPercentage):
+    global _results
+    video = cv2.VideoCapture(_inputs[_curVideo]['video_path'])
+    maxFrame = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
     _results.append({
-        'source_video': str(_inputs[_curVideo]['source_video']),
-        'flight_style': str(_inputs[_curVideo]['flight_style']),
-        'min_action': int(actionFirst),
-        'max_action': int(actionSecond),
-        'min_video': int(videoFirst),
-        'max_video': int(videoSecond)
+        'video_path': _inputs[_curVideo]['video_path'],
+        'video_name': _inputs[_curVideo]['video_name'],
+        'video_style': _inputs[_curVideo]['video_style'],
+        'video_label': _inputs[_curVideo]['video_label'],
+        'min_action': int(actionFirstPercentage * maxFrame),
+        'max_action': int(actionSecondPercentage * maxFrame),
+        'min_video': int(videoFirstPercentage * maxFrame),
+        'max_video': int(videoSecondPercentage * maxFrame)
     })
+
+
+@Slot()
+def getNextVideo():
+    global _curVideo, _results, _inputs, _window
     if _curVideo + 1 < len(_inputs):
-        # read next video
         _curVideo += 1
-        _window.loadNextVideo(_inputs[_curVideo]['source_video'], _inputs[_curVideo]['flight_style'])
+        _window.setNextVideo(_inputs[_curVideo]['video_path'], _inputs[_curVideo]['video_style'] + '')
     else:
-        # dump results JSON
-        directory = os.path.dirname(__file__)
-        input_json_path = os.path.join(directory, "output_classifying_tool.json")
-        with open(input_json_path, 'w') as output_file:
-            json.dump(_results, output_file)
-            _window = -1;
+        writeResults()
+        sys.exit(0)
 
 
-def readJSON():
+def readJson():
+    global _labels, _inputs, _maxVideosToClassifyPerStyle
     directory = os.path.dirname(__file__)
-    input_json_path = os.path.join(directory, "input_classifying_tool.json")
-    with open(input_json_path) as input_json:
-        input_data = json.load(input_json)
-        for elem in input_data:
-            _inputs.append({
-                'source_video': str(elem['source_video']),
-                'flight_style': str(elem['flight_style'])
-            })
+    inputJsonPath = os.path.join(directory, "Diving48_train.json")
+    with open(inputJsonPath) as jsonFile:
+        jsonData = json.load(jsonFile)
+        for elem in jsonData:
+            if elem['label'] in _labels.keys() and _labels[elem['label']][1] < _maxVideosToClassifyPerStyle:
+                _inputs.append({
+                    'video_path': os.path.join(directory, "Diving48_rgb/rgb/" + elem['vid_name'] + '.mp4'),
+                    'video_name': elem['vid_name'],
+                    'video_style': _labels[elem['label']][0],
+                    'video_label': elem['label']
+                })
+                _labels[elem['label']][1] = _labels[elem['label']][1] + 1
+
+
+def writeResults():
+    global _results
+    with open('results.json', 'w') as outfile:
+        json.dump(_results, outfile, indent=4)
+    for elem in _results:
+        directory = os.path.dirname(__file__)
+        parsedVideosPath = os.path.join(directory, "Diving48_selection")
+        videoPath = os.path.join(parsedVideosPath, str(elem['video_label']) + '_' + elem['video_name'])
+        framesPath = os.path.join(videoPath, "frames")
+        flowPath = os.path.join(videoPath, "opticalflow")
+        originalVideoFile = elem['video_path']
+        resultVideoFile = os.path.join(videoPath, elem['video_name'] + ".mp4")
+        os.makedirs(videoPath, exist_ok=True)
+        os.makedirs(framesPath, exist_ok=True)
+        os.makedirs(flowPath, exist_ok=True)
+        shutil.copy2(originalVideoFile, resultVideoFile)
+        videoToFrames(originalVideoFile, framesPath, elem['min_video'], elem['max_video'])
+
+
+def videoToFrames(sourceVideoFile, outputFolder, startFrame, endFrame):
+    video = cv2.VideoCapture(sourceVideoFile)
+    currentFrame = startFrame
+    video.set(cv2.CAP_PROP_POS_FRAMES, startFrame)
+    while currentFrame < endFrame:
+        ret, frame = video.read()
+        frameFile = os.path.join(outputFolder, str(currentFrame - startFrame).zfill(6) + ".jpg")
+        cv2.imwrite(frameFile, frame)
+        currentFrame += 1
 
 
 if __name__ == '__main__':
-
-    _window = 0
+    _labels = {19: ['Pike', 0], 13: ['Straight', 0], 47: ['Tuck', 0]}
+    _maxVideosToClassifyPerStyle = 1
     _curVideo = 0
     _results = []
-    _inputs = [{
-        'source_video': 'video.mp4',
-        'flight_style': 'Pike'
-    }, {
-        'source_video': 'video2.mp4',
-        'flight_style': 'Tuck'
-    }]
-    # readJSON()
+    _inputs = []
+    readJson()
 
     app = QApplication(sys.argv)
     engine = QQmlApplicationEngine()
     engine.load(QUrl.fromLocalFile('gui.qml'))
+
     _window = engine.rootObjects()[0]
-    _window.nextVideo.connect(nextVideoClicked)
-    _window.loadNextVideo(_inputs[_curVideo]['source_video'], _inputs[_curVideo]['flight_style'])
+    _window.setResult.connect(setResult)
+    _window.getNextVideo.connect(getNextVideo)
+    _window.setNextVideo(_inputs[_curVideo]['video_path'], _inputs[_curVideo]['video_style'])
 
     if not engine.rootObjects():
         sys.exit(-1)
