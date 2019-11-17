@@ -24,13 +24,16 @@ def setResult(actionFirstPercentage, actionSecondPercentage, videoFirstPercentag
         'min_video': int(videoFirstPercentage * maxFrame),
         'max_video': int(videoSecondPercentage * maxFrame)
     })
+    _classifiedStyles[_inputs[_curVideo]['video_style']] += 1
 
 
 @Slot()
 def getNextVideo():
-    global _curVideo, _results, _inputs, _window
-    if _curVideo + 1 < len(_inputs):
-        _curVideo += 1
+    global _curVideo, _results, _inputs, _window, _classifiedStyles
+    _curVideo = _curVideo + 1
+    while _curVideo < len(_inputs) and _classifiedStyles[_inputs[_curVideo]['video_style']] >= _maxVideosToClassifyPerStyle:
+        _curVideo = _curVideo + 1
+    if _curVideo < len(_inputs):
         _window.setNextVideo(_inputs[_curVideo]['video_path'], _inputs[_curVideo]['video_style'] + '')
     else:
         writeResults()
@@ -38,20 +41,27 @@ def getNextVideo():
 
 
 def readJson():
-    global _labels, _inputs, _maxVideosToClassifyPerStyle
+    global _labels, _classifiedStyles, _inputs
     directory = os.path.dirname(__file__)
+    inputJsonPath = os.path.join(directory, "Diving48_vocab.json")
+    with open(inputJsonPath) as jsonFile:
+        jsonData = json.load(jsonFile)
+        id = 0;
+        for elem in jsonData:
+            if elem[2] == "NoTwis" and elem[3] != "FREE":
+                _labels[id] = elem[3]
+            id = id + 1
     inputJsonPath = os.path.join(directory, "Diving48_train.json")
     with open(inputJsonPath) as jsonFile:
         jsonData = json.load(jsonFile)
         for elem in jsonData:
-            if elem['label'] in _labels.keys() and _labels[elem['label']][1] < _maxVideosToClassifyPerStyle:
+            if elem['label'] in _labels.keys():
                 _inputs.append({
                     'video_path': os.path.join(directory, "Diving48_rgb/rgb/" + elem['vid_name'] + '.mp4'),
                     'video_name': elem['vid_name'],
-                    'video_style': _labels[elem['label']][0],
+                    'video_style': _labels[elem['label']],
                     'video_label': elem['label']
                 })
-                _labels[elem['label']][1] = _labels[elem['label']][1] + 1
 
 
 def writeResults():
@@ -85,8 +95,10 @@ def videoToFrames(sourceVideoFile, outputFolder, startFrame, endFrame):
 
 
 if __name__ == '__main__':
-    _labels = {19: ['Pike', 0], 13: ['Straight', 0], 47: ['Tuck', 0]}
-    _maxVideosToClassifyPerStyle = 1
+    #_labels = {13:"STR", 12:"PIKE", 47:"TUCK"}
+    _labels = {}
+    _classifiedStyles = {"PIKE": 0, "STR": 0, "TUCK": 0}
+    _maxVideosToClassifyPerStyle = 3
     _curVideo = 0
     _results = []
     _inputs = []
