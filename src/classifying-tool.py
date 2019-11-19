@@ -9,32 +9,40 @@ from PySide2.QtWidgets import QApplication
 from PySide2.QtQml import QQmlApplicationEngine
 
 
-@Slot(float, float, float, float)
-def setResult(actionFirstPercentage, actionSecondPercentage, videoFirstPercentage, videoSecondPercentage):
+@Slot(str, float, float, float, float)
+def setResult(videoStyle, actionFirstPercentage, actionSecondPercentage, videoFirstPercentage, videoSecondPercentage):
     global _results
     video = cv2.VideoCapture(_inputs[_curVideo]['video_path'])
     maxFrame = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
     _results.append({
         'video_path': _inputs[_curVideo]['video_path'],
         'video_name': _inputs[_curVideo]['video_name'],
-        'video_style': _inputs[_curVideo]['video_style'],
         'video_label': _inputs[_curVideo]['video_label'],
+        'video_style': str(videoStyle),
         'min_action': int(actionFirstPercentage * maxFrame),
         'max_action': int(actionSecondPercentage * maxFrame),
         'min_video': int(videoFirstPercentage * maxFrame),
         'max_video': int(videoSecondPercentage * maxFrame)
     })
-    _classifiedStyles[_inputs[_curVideo]['video_style']] += 1
+    _classifiedStyles[videoStyle] += 1
 
+@Slot()
+def getActionList():
+    global _classifiedStyles
+    for elem in _classifiedStyles.keys():
+        if (_classifiedStyles[elem] < _maxVideosToClassifyPerStyle):
+            _window.addToActionList(elem)
 
 @Slot()
 def getNextVideo():
     global _curVideo, _results, _inputs, _window, _classifiedStyles
-    _curVideo = _curVideo + 1
-    while _curVideo < len(_inputs) and _classifiedStyles[_inputs[_curVideo]['video_style']] >= _maxVideosToClassifyPerStyle:
-        _curVideo = _curVideo + 1
-    if _curVideo < len(_inputs):
-        _window.setNextVideo(_inputs[_curVideo]['video_path'], _inputs[_curVideo]['video_style'] + '')
+    hasMoreVideosToClassify = False
+    for elem in _classifiedStyles.keys():
+        if (_classifiedStyles[elem] < _maxVideosToClassifyPerStyle):
+            hasMoreVideosToClassify = True
+    if _curVideo < len(_inputs) and hasMoreVideosToClassify:
+        _curVideo += 1
+        _window.setNextVideo(_inputs[_curVideo]['video_path'])
     else:
         writeResults()
         sys.exit(0)
@@ -59,7 +67,6 @@ def readJson():
                 _inputs.append({
                     'video_path': os.path.join(directory, "Diving48_rgb/rgb/" + elem['vid_name'] + '.mp4'),
                     'video_name': elem['vid_name'],
-                    'video_style': _labels[elem['label']],
                     'video_label': elem['label']
                 })
 
@@ -95,10 +102,9 @@ def videoToFrames(sourceVideoFile, outputFolder, startFrame, endFrame):
 
 
 if __name__ == '__main__':
-    #_labels = {13:"STR", 12:"PIKE", 47:"TUCK"}
     _labels = {}
-    _classifiedStyles = {"PIKE": 0, "STR": 0, "TUCK": 0}
-    _maxVideosToClassifyPerStyle = 3
+    _classifiedStyles = {"PIKE": 0, "TUCK": 0, "STR": 0}
+    _maxVideosToClassifyPerStyle = 2
     _curVideo = 0
     _results = []
     _inputs = []
@@ -111,7 +117,9 @@ if __name__ == '__main__':
     _window = engine.rootObjects()[0]
     _window.setResult.connect(setResult)
     _window.getNextVideo.connect(getNextVideo)
-    _window.setNextVideo(_inputs[_curVideo]['video_path'], _inputs[_curVideo]['video_style'])
+    _window.getActionList.connect(getActionList)
+    _window.setNextVideo(_inputs[_curVideo]['video_path'])
+    getActionList()
 
     if not engine.rootObjects():
         sys.exit(-1)

@@ -10,14 +10,21 @@ ApplicationWindow {
     height: 680
     visible: true
 
-    signal setResult(double actionFirst, double actionSecond, double videoFirst, double videoSecond)
+    signal setResult(string chosenAction, double actionFirst, double actionSecond, double videoFirst, double videoSecond)
     signal getNextVideo()
+    signal getActionList()
 
-    function setNextVideo(videoName, styleName) {
-        flightStyle.text = styleName;
+    function setNextVideo(videoName) {
+        actionCombo.model = ["Choose a label"]
         videoPlayer.source = videoName;
         videoPlayer.pause();
         videoTimer.restart();
+    }
+
+    function addToActionList(action) {
+        var modelArray = actionCombo.model;
+        modelArray.push(action);
+        actionCombo.model = modelArray;
     }
 
     Timer {
@@ -26,11 +33,13 @@ ApplicationWindow {
         running: false
 
         onTriggered: {
+            actionCombo.enabled = true
             actionSlider.enabled = true
             videoSlider.enabled = true
             discardBtn.enabled = true
-            nextBtn.enabled = true
+            nextBtn.enabled = false
 
+            actionCombo.currentIndex = 0;
             actionSlider.from = 0;
             actionSlider.first.value = 0;
             actionSlider.to = videoPlayer.duration;
@@ -47,14 +56,6 @@ ApplicationWindow {
         anchors.margins: 10
         anchors.fill: parent
 
-        Text {
-            id: flightStyle
-            text: "Flight style"
-            font.weight: Font.Bold
-            horizontalAlignment: Text.AlignHCenter
-            Layout.fillWidth: true
-        }
-
         Video {
             id: videoPlayer
             width: 640
@@ -66,7 +67,29 @@ ApplicationWindow {
         RowLayout {
 
             Text {
-                text: "Action range:"
+                text: "Select label:"
+                Layout.minimumWidth: 100
+                Layout.maximumWidth: 100
+            }
+
+            ComboBox {
+                id: actionCombo
+                Layout.fillWidth: true
+
+                onCurrentIndexChanged: {
+                    if (currentIndex != 0) {
+                        nextBtn.enabled = true;
+                    } else {
+                        nextBtn.enabled = false
+                    }
+                }
+            }
+        }
+
+        RowLayout {
+
+            Text {
+                text: "Label range:"
                 Layout.minimumWidth: 100
                 Layout.maximumWidth: 100
             }
@@ -127,20 +150,24 @@ ApplicationWindow {
                 id: nextBtn
                 text: "Next video"
                 Layout.fillWidth: true
+                enabled: false
                 onClicked:
                 {
                     var actionFirstPercentage = actionSlider.first.value / videoPlayer.duration
                     var actionSecondPercentage = actionSlider.second.value / videoPlayer.duration
                     var videoFirstPercentage = videoSlider.first.value / videoPlayer.duration
                     var videoSecondPercentage = videoSlider.second.value / videoPlayer.duration
+                    var comboText = actionCombo.model[actionCombo.currentIndex]
 
+                    actionCombo.enabled = false
                     actionSlider.enabled = false
                     videoSlider.enabled = false
                     discardBtn.enabled = false
                     nextBtn.enabled = false
 
-                    root.setResult(actionFirstPercentage, actionSecondPercentage, videoFirstPercentage, videoSecondPercentage)
+                    root.setResult(comboText, actionFirstPercentage, actionSecondPercentage, videoFirstPercentage, videoSecondPercentage)
                     root.getNextVideo()
+                    root.getActionList()
                 }
             }
         }
