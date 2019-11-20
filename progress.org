@@ -2,7 +2,10 @@
 ** TODO choose 50 videos from each class with regard to:
    - proper perspective
    - proper pose
-   - proper resolution/focus/contrast
+   - proper resolution/focus/contrast - no motion blur...
+   - only one person jumping
+   - only male divers (no swimsuit)
+   - diver is not occluded
 ** TODO extract in-air frames and prepare folder structure as required by Filip Ilic
 * [0/3] Data preprocessing
 ** TODO Load pkl files from Filip Ilic
