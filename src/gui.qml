@@ -143,6 +143,7 @@ ApplicationWindow {
                     nextBtn.enabled = false
 
                     root.getNextVideo()
+                    root.getActionList()
                 }
             }
 

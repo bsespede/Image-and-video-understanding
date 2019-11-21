@@ -3,6 +3,7 @@ import json
 import os
 import shutil
 import cv2
+import random
 
 from PySide2.QtCore import QUrl, Slot
 from PySide2.QtWidgets import QApplication
@@ -25,12 +26,13 @@ def setResult(videoStyle, actionFirstPercentage, actionSecondPercentage, videoFi
         'max_video': int(videoSecondPercentage * maxFrame)
     })
     _classifiedStyles[videoStyle] += 1
+    print(_classifiedStyles)
 
 @Slot()
 def getActionList():
     global _classifiedStyles
     for elem in _classifiedStyles.keys():
-        if (_classifiedStyles[elem] < _maxVideosToClassifyPerStyle):
+        if _classifiedStyles[elem] < _maxVideosToClassifyPerStyle:
             _window.addToActionList(elem)
 
 @Slot()
@@ -38,7 +40,7 @@ def getNextVideo():
     global _curVideo, _results, _inputs, _window, _classifiedStyles
     hasMoreVideosToClassify = False
     for elem in _classifiedStyles.keys():
-        if (_classifiedStyles[elem] < _maxVideosToClassifyPerStyle):
+        if _classifiedStyles[elem] < _maxVideosToClassifyPerStyle:
             hasMoreVideosToClassify = True
     if _curVideo < len(_inputs) and hasMoreVideosToClassify:
         _curVideo += 1
@@ -69,6 +71,7 @@ def readJson():
                     'video_name': elem['vid_name'],
                     'video_label': elem['label']
                 })
+    random.shuffle(_inputs)
 
 
 def writeResults():
@@ -104,7 +107,7 @@ def videoToFrames(sourceVideoFile, outputFolder, startFrame, endFrame):
 if __name__ == '__main__':
     _labels = {}
     _classifiedStyles = {"PIKE": 0, "TUCK": 0, "STR": 0}
-    _maxVideosToClassifyPerStyle = 2
+    _maxVideosToClassifyPerStyle = 100
     _curVideo = 0
     _results = []
     _inputs = []
