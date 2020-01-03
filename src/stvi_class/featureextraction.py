@@ -135,10 +135,12 @@ class FeatureExtractor:
         contour_frame = np.zeros(self.stvi_data.stvis.shape[0:2])
         cv2.drawContours(contour_frame, contour, -1, color=(255, 255, 255), thickness=2)
         hu_moments = cv2.HuMoments(cv2.moments(contour_frame)).flatten()
-        log_hu_moments = np.sign(hu_moments) * np.log(hu_moments)
+        log_hu_moments = np.sign(hu_moments) * np.log(np.abs(hu_moments))
         if verbose == True:
             print('Hu moments: ', hu_moments)
             print('Hu moments log: ', log_hu_moments)
+            self.plotFrame(img_as_ubyte(self.stvi_data.labels_to_falsecolor(contour_frame)))
+
         return log_hu_moments[0:6]
 
     def plotFrame(self, frame, window_title="frame"):
