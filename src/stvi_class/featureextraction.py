@@ -37,12 +37,13 @@ class FeatureExtractor:
         """Save feature vectors to pkl file at given path/filename"""
         ...
 
-    def framePreprocessing(self, stvi_frame):
+    def framePreprocessing(self, stvi_frame, verbose=False):
         stvi_frame_cp = stvi_frame.copy()
 
         # extract contours
         contours, _ = cv2.findContours(stvi_frame_cp, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
-        print("Number of extracted contours ", len(contours))
+        if verbose == True:
+            print("Number of extracted contours ", len(contours))
         contour_frame = np.zeros_like(self.stvi_data.labels_to_falsecolor(stvi_frame_cp))
 
         # find largest area contours
@@ -68,11 +69,14 @@ class FeatureExtractor:
             filled_contour = np.zeros_like(contour_frame)
             cv2.drawContours(filled_contour, contours, idx, (255, 0, 0), thickness=cv2.FILLED)
             filled_contour_gray = cv2.cvtColor(filled_contour, cv2.COLOR_RGB2GRAY)
-            print('nonzero args: ', np.argwhere(filled_contour_gray > 0).shape)
+            if verbose == True:
+                print('nonzero args: ', np.argwhere(filled_contour_gray > 0).shape)
             stvi_ids = np.unique(np.where(filled_contour_gray > 0, stvi_frame_cp, 0))
-            print('masked ids: ', stvi_ids, ' all: ', np.unique(stvi_frame_cp))
+            if verbose == True:
+                print('masked ids: ', stvi_ids, ' all: ', np.unique(stvi_frame_cp))
             stvi_id_histograms[iidx,:] = np.bincount(np.where(filled_contour_gray > 0, stvi_frame_cp, 0).flatten(), minlength=max_stvi_id+1)
-            print('hist stvi_ids: ', stvi_id_histograms[iidx,:])
+            if verbose == True:
+                print('hist stvi_ids: ', stvi_id_histograms[iidx,:])
 
             contour_stvi_ids[iidx] = np.argmax(stvi_id_histograms[iidx,1:]) + 1
             assert(np.isin(stvi_ids, contour_stvi_ids[iidx]).any())
@@ -81,7 +85,8 @@ class FeatureExtractor:
             # contour_stvi_ids[iidx] = stvi_frame[contour_cog[0,0], contour_cog[0,1]]
             # contour_stvi_ids[iidx] = stvi_frame[contours[idx][0,0], contours[idx][0,1]]
 
-        print("STVI IDs: ", contour_stvi_ids)
+        if verbose == True:
+            print("STVI IDs: ", contour_stvi_ids)
 
         # detect background contours (TODO?)
 
@@ -91,7 +96,9 @@ class FeatureExtractor:
         for iidx,idx in enumerate(max_contour_idxs):
             num_ids = np.argwhere(stvi_id_histograms[iidx,:]  > 0)
             num_matching_ids[iidx] = len(np.intersect1d(reference_ids, num_ids))
-        print("num matching ids: ", num_matching_ids)
+
+        if verbose == True:
+            print("num matching ids: ", num_matching_ids)
 
         # merge contours based on STVI IDs, relative size (and proximity TODO?)
         min_relative_area = 0.75
@@ -101,7 +108,8 @@ class FeatureExtractor:
         merged_contour = contours[max_contour_idxs[0]]
         if len(max_contour_idxs) > 1:
             merge_condition = np.logical_and(contour_areas[max_contour_idxs] > (min_relative_area * reference_contour_area), (num_matching_ids / reference_num_ids) >= min_matching_ids)
-            print("merge_condition: ", merge_condition, " (", contour_areas[max_contour_idxs] / reference_contour_area, ", ", num_matching_ids / reference_num_ids, ")")
+            if verbose == True:
+                print("merge_condition: ", merge_condition, " (", contour_areas[max_contour_idxs] / reference_contour_area, ", ", num_matching_ids / reference_num_ids, ")")
             contour_idxs_to_merge = np.argwhere(merge_condition)
             merged_contour = np.vstack([contours[idx] for idx in max_contour_idxs[contour_idxs_to_merge.flatten()]])
 
