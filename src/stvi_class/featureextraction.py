@@ -129,7 +129,7 @@ class FeatureExtractor:
         mbr = np.int0(mbr)
         cv2.drawContours(contour_frame, [mbr], 0, color=(0, 255, 255), thickness=1)
 
-        return contour_frame, contours
+        return contour_frame, merged_contour
 
     def extractScalarFeatures(self, contour, verbose=False):
         contour_frame = np.zeros(self.stvi_data.stvis.shape[0:2])
