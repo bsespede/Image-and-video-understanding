@@ -8,7 +8,7 @@ class FeatureExtractor:
     """Extract scalar features framewise from STVIs"""
 
     stvi_data = []
-    num_scalar_features_per_stvi = 1
+    num_scalar_features_per_stvi = 6
 
     def __init__(self, stvi_data):
         """:param stvi_data: reference to currently loaded STVI tensor"""
@@ -131,8 +131,15 @@ class FeatureExtractor:
 
         return contour_frame, contours
 
-    def extractScalarFeatures(self, contours):
-        return 0
+    def extractScalarFeatures(self, contour, verbose=False):
+        contour_frame = np.zeros(self.stvi_data.stvis.shape[0:2])
+        cv2.drawContours(contour_frame, contour, -1, color=(255, 255, 255), thickness=2)
+        hu_moments = cv2.HuMoments(cv2.moments(contour_frame)).flatten()
+        log_hu_moments = np.sign(hu_moments) * np.log(hu_moments)
+        if verbose == True:
+            print('Hu moments: ', hu_moments)
+            print('Hu moments log: ', log_hu_moments)
+        return log_hu_moments[0:6]
 
     def plotFrame(self, frame, window_title="frame"):
         cv2.namedWindow(window_title)
