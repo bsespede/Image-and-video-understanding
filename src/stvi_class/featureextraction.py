@@ -91,23 +91,28 @@ class FeatureExtractor:
         min_matching_ids = 0.66
         reference_contour_area = contour_areas[max_contour_idxs[0]]
         reference_num_ids = len(reference_ids) #sum(stvi_id_histograms[0,:] > 0)
+        merged_contour = contours[max_contour_idxs[0]]
         if len(max_contour_idxs) > 1:
             merge_condition = np.logical_and(contour_areas[max_contour_idxs] > (min_relative_area * reference_contour_area), (num_matching_ids / reference_num_ids) >= min_matching_ids)
             print("merge_condition: ", merge_condition, " (", contour_areas[max_contour_idxs] / reference_contour_area, ", ", num_matching_ids / reference_num_ids, ")")
+            contour_idxs_to_merge = np.argwhere(merge_condition)
+            merged_contour = np.vstack([contours[idx] for idx in max_contour_idxs[contour_idxs_to_merge.flatten()]])
+
+            cv2.drawContours(contour_frame, merged_contour, -1, color=(255, 0, 0), thickness=1)
+
 
         # compute bounding box on chosen contour
-        bounding_box = cv2.boundingRect(np.vstack([contours[idx] for idx in max_contour_idxs]))
+        bounding_box = cv2.boundingRect(merged_contour)
         cv2.rectangle(contour_frame, (bounding_box[0], bounding_box[1]),
                       (bounding_box[0] + bounding_box[2], bounding_box[1] + bounding_box[3]), (255, 0, 0), 1)
         
 
-        # fit MBR to contours
+        # fit MBR to contour
         contour_mbrs = []
-        for contour_idx in max_contour_idxs:
-            contour_mbrs.append(cv2.minAreaRect(contours[contour_idx]))
-            mbr = cv2.boxPoints(contour_mbrs[-1])
-            mbr = np.int0(mbr)
-            cv2.drawContours(contour_frame, [mbr], 0, (0, 255, 255), 1)
+        contour_mbrs.append(cv2.minAreaRect(merged_contour))
+        mbr = cv2.boxPoints(contour_mbrs[-1])
+        mbr = np.int0(mbr)
+        cv2.drawContours(contour_frame, [mbr], 0, color=(0, 255, 255), thickness=1)
 
         return contour_frame, contours
 
