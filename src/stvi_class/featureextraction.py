@@ -24,7 +24,14 @@ class FeatureExtractor:
         # for frame_idx in range(num_frames):
         for frame_idx in range(num_frames):
             contour_frame, contours = self.framePreprocessing(self.stvi_data.stvis[:, :, frame_idx])
-            self.feature_vectors[frame_idx, :] = self.extractScalarFeatures(contours, contour_frame)
+            # plot frame preprocessing results
+            plotting = True
+            if plotting:
+                max_contour_frame = np.maximum(contour_frame, self.stvi_data.stvis[:, :, frame_idx, np.newaxis])
+                stvi_frame = self.stvi_data.labels_to_falsecolor(self.stvi_data.stvis[:, :, frame_idx])
+                self.plotFrame(np.hstack((img_as_ubyte(max_contour_frame), img_as_ubyte(stvi_frame))))
+
+            self.feature_vectors[frame_idx, :] = self.extractScalarFeatures(contours)
 
     def exportFeatureVector(self, feature_file_path):
         """Save feature vectors to pkl file at given path/filename"""
@@ -51,7 +58,7 @@ class FeatureExtractor:
                 color = (0, 255, 0)
             else:
                 color = (0, 0, 255)
-            cv2.drawContours(contour_frame, contours, contour_idx, color, 1)
+            cv2.drawContours(contour_frame, contours, contour_idx, color, thickness=2)
 
         # find STVI IDs contained in  contours
         max_stvi_id = np.max(stvi_frame_cp.flatten())
@@ -116,8 +123,7 @@ class FeatureExtractor:
 
         return contour_frame, contours
 
-    def extractScalarFeatures(self, contours, contour_frame):
-        self.plotFrame(img_as_ubyte(contour_frame))
+    def extractScalarFeatures(self, contours):
         return 0
 
     def plotFrame(self, frame, window_title="frame"):
