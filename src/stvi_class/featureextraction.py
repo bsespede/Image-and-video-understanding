@@ -53,8 +53,49 @@ class FeatureExtractor:
                 color = (0, 0, 255)
             cv2.drawContours(contour_frame, contours, contour_idx, color, 1)
 
+        # find STVI IDs contained in  contours
+        max_stvi_id = np.max(stvi_frame_cp.flatten())
+        contour_stvi_ids = np.zeros_like(max_contour_idxs)
+        stvi_id_histograms = np.zeros((len(max_contour_idxs), max_stvi_id+1))
+        for iidx,idx in enumerate(max_contour_idxs):
+            filled_contour = np.zeros_like(contour_frame)
+            cv2.drawContours(filled_contour, contours, idx, (255, 0, 0), thickness=cv2.FILLED)
+            filled_contour_gray = cv2.cvtColor(filled_contour, cv2.COLOR_RGB2GRAY)
+            print('nonzero args: ', np.argwhere(filled_contour_gray > 0).shape)
+            stvi_ids = np.unique(np.where(filled_contour_gray > 0, stvi_frame_cp, 0))
+            print('masked ids: ', stvi_ids, ' all: ', np.unique(stvi_frame_cp))
+            stvi_id_histograms[iidx,:] = np.bincount(np.where(filled_contour_gray > 0, stvi_frame_cp, 0).flatten(), minlength=max_stvi_id+1)
+            print('hist stvi_ids: ', stvi_id_histograms[iidx,:])
 
-        # compute bounding box on chosen contours
+            contour_stvi_ids[iidx] = np.argmax(stvi_id_histograms[iidx,1:]) + 1
+            assert(np.isin(stvi_ids, contour_stvi_ids[iidx]).any())
+
+            # contour_cog = np.int0(np.round(np.mean(contours[idx],axis=0)))
+            # contour_stvi_ids[iidx] = stvi_frame[contour_cog[0,0], contour_cog[0,1]]
+            # contour_stvi_ids[iidx] = stvi_frame[contours[idx][0,0], contours[idx][0,1]]
+
+        print("STVI IDs: ", contour_stvi_ids)
+
+        # detect background contours (TODO?)
+
+        # find IDs matching the largest contour
+        num_matching_ids = np.zeros_like(max_contour_idxs)
+        reference_ids = np.argwhere(stvi_id_histograms[0,:] > 0)
+        for iidx,idx in enumerate(max_contour_idxs):
+            num_ids = np.argwhere(stvi_id_histograms[iidx,:]  > 0)
+            num_matching_ids[iidx] = len(np.intersect1d(reference_ids, num_ids))
+        print("num matching ids: ", num_matching_ids)
+
+        # merge contours based on STVI IDs, relative size (and proximity TODO?)
+        min_relative_area = 0.75
+        min_matching_ids = 0.66
+        reference_contour_area = contour_areas[max_contour_idxs[0]]
+        reference_num_ids = len(reference_ids) #sum(stvi_id_histograms[0,:] > 0)
+        if len(max_contour_idxs) > 1:
+            merge_condition = np.logical_and(contour_areas[max_contour_idxs] > (min_relative_area * reference_contour_area), (num_matching_ids / reference_num_ids) >= min_matching_ids)
+            print("merge_condition: ", merge_condition, " (", contour_areas[max_contour_idxs] / reference_contour_area, ", ", num_matching_ids / reference_num_ids, ")")
+
+        # compute bounding box on chosen contour
         bounding_box = cv2.boundingRect(np.vstack([contours[idx] for idx in max_contour_idxs]))
         cv2.rectangle(contour_frame, (bounding_box[0], bounding_box[1]),
                       (bounding_box[0] + bounding_box[2], bounding_box[1] + bounding_box[3]), (255, 0, 0), 1)
