@@ -1,0 +1,3002 @@
+[
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00174.mp4",
+        "video_name": "xbQCwTHcGN8_00174",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 20,
+        "max_action": 90,
+        "min_video": 0,
+        "max_video": 108
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00968.mp4",
+        "video_name": "VNvb5oLOpLg_00968",
+        "video_label": 26,
+        "video_style": "TUCK",
+        "min_action": 33,
+        "max_action": 115,
+        "min_video": 0,
+        "max_video": 192
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/Bb0ZiYVNtDs_00073.mp4",
+        "video_name": "Bb0ZiYVNtDs_00073",
+        "video_label": 43,
+        "video_style": "PIKE",
+        "min_action": 33,
+        "max_action": 51,
+        "min_video": 0,
+        "max_video": 65
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00032.mp4",
+        "video_name": "xbQCwTHcGN8_00032",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 26,
+        "max_action": 83,
+        "min_video": 0,
+        "max_video": 110
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/3PLiUG_DuC8_00015.mp4",
+        "video_name": "3PLiUG_DuC8_00015",
+        "video_label": 33,
+        "video_style": "PIKE",
+        "min_action": 25,
+        "max_action": 98,
+        "min_video": 0,
+        "max_video": 122
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/kVT_sNgYBAE_00051.mp4",
+        "video_name": "kVT_sNgYBAE_00051",
+        "video_label": 45,
+        "video_style": "TUCK",
+        "min_action": 101,
+        "max_action": 170,
+        "min_video": 0,
+        "max_video": 207
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/cYkUl8MrXgA_00154.mp4",
+        "video_name": "cYkUl8MrXgA_00154",
+        "video_label": 35,
+        "video_style": "PIKE",
+        "min_action": 31,
+        "max_action": 51,
+        "min_video": 0,
+        "max_video": 62
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00017.mp4",
+        "video_name": "VNvb5oLOpLg_00017",
+        "video_label": 19,
+        "video_style": "PIKE",
+        "min_action": 136,
+        "max_action": 179,
+        "min_video": 0,
+        "max_video": 214
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/V5parOfpuEQ_00086.mp4",
+        "video_name": "V5parOfpuEQ_00086",
+        "video_label": 13,
+        "video_style": "PIKE",
+        "min_action": 22,
+        "max_action": 43,
+        "min_video": 0,
+        "max_video": 55
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/nOlRwoxsDJ0_00619.mp4",
+        "video_name": "nOlRwoxsDJ0_00619",
+        "video_label": 20,
+        "video_style": "STR",
+        "min_action": 34,
+        "max_action": 81,
+        "min_video": 0,
+        "max_video": 117
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00098.mp4",
+        "video_name": "xbQCwTHcGN8_00098",
+        "video_label": 26,
+        "video_style": "PIKE",
+        "min_action": 12,
+        "max_action": 91,
+        "min_video": 0,
+        "max_video": 117
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/OFxuiqI5G44_00042.mp4",
+        "video_name": "OFxuiqI5G44_00042",
+        "video_label": 44,
+        "video_style": "TUCK",
+        "min_action": 47,
+        "max_action": 136,
+        "min_video": 0,
+        "max_video": 184
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/V5parOfpuEQ_00110.mp4",
+        "video_name": "V5parOfpuEQ_00110",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 75,
+        "max_action": 99,
+        "min_video": 0,
+        "max_video": 110
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00117.mp4",
+        "video_name": "VNvb5oLOpLg_00117",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 28,
+        "max_action": 54,
+        "min_video": 0,
+        "max_video": 75
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00167.mp4",
+        "video_name": "JzOshOJgofw_00167",
+        "video_label": 26,
+        "video_style": "PIKE",
+        "min_action": 26,
+        "max_action": 61,
+        "min_video": 0,
+        "max_video": 67
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00222.mp4",
+        "video_name": "JzOshOJgofw_00222",
+        "video_label": 8,
+        "video_style": "TUCK",
+        "min_action": 56,
+        "max_action": 79,
+        "min_video": 0,
+        "max_video": 87
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/OFxuiqI5G44_00145.mp4",
+        "video_name": "OFxuiqI5G44_00145",
+        "video_label": 8,
+        "video_style": "TUCK",
+        "min_action": 69,
+        "max_action": 158,
+        "min_video": 0,
+        "max_video": 192
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/c7FHotPDZIw_00041.mp4",
+        "video_name": "c7FHotPDZIw_00041",
+        "video_label": 7,
+        "video_style": "TUCK",
+        "min_action": 24,
+        "max_action": 46,
+        "min_video": 0,
+        "max_video": 57
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/Bb0ZiYVNtDs_00068.mp4",
+        "video_name": "Bb0ZiYVNtDs_00068",
+        "video_label": 12,
+        "video_style": "TUCK",
+        "min_action": 33,
+        "max_action": 108,
+        "min_video": 0,
+        "max_video": 126
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00008.mp4",
+        "video_name": "xbQCwTHcGN8_00008",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 21,
+        "max_action": 91,
+        "min_video": 0,
+        "max_video": 112
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00131.mp4",
+        "video_name": "VNvb5oLOpLg_00131",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 59,
+        "max_action": 81,
+        "min_video": 0,
+        "max_video": 122
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00031.mp4",
+        "video_name": "xbQCwTHcGN8_00031",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 46,
+        "max_action": 66,
+        "min_video": 0,
+        "max_video": 75
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00157.mp4",
+        "video_name": "JzOshOJgofw_00157",
+        "video_label": 34,
+        "video_style": "TUCK",
+        "min_action": 61,
+        "max_action": 104,
+        "min_video": 0,
+        "max_video": 114
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/mGbuP7nT2ck_00084.mp4",
+        "video_name": "mGbuP7nT2ck_00084",
+        "video_label": 33,
+        "video_style": "PIKE",
+        "min_action": 17,
+        "max_action": 45,
+        "min_video": 0,
+        "max_video": 53
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00538.mp4",
+        "video_name": "sk8TafuB3lU_00538",
+        "video_label": 27,
+        "video_style": "TUCK",
+        "min_action": 33,
+        "max_action": 109,
+        "min_video": 0,
+        "max_video": 156
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/nOlRwoxsDJ0_00630.mp4",
+        "video_name": "nOlRwoxsDJ0_00630",
+        "video_label": 46,
+        "video_style": "PIKE",
+        "min_action": 48,
+        "max_action": 123,
+        "min_video": 0,
+        "max_video": 217
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00454.mp4",
+        "video_name": "VNvb5oLOpLg_00454",
+        "video_label": 33,
+        "video_style": "PIKE",
+        "min_action": 151,
+        "max_action": 216,
+        "min_video": 0,
+        "max_video": 229
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/nOlRwoxsDJ0_00624.mp4",
+        "video_name": "nOlRwoxsDJ0_00624",
+        "video_label": 20,
+        "video_style": "PIKE",
+        "min_action": 48,
+        "max_action": 138,
+        "min_video": 0,
+        "max_video": 211
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00825.mp4",
+        "video_name": "sk8TafuB3lU_00825",
+        "video_label": 15,
+        "video_style": "PIKE",
+        "min_action": 34,
+        "max_action": 71,
+        "min_video": 0,
+        "max_video": 140
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/siEI_jaSmd4_00000.mp4",
+        "video_name": "siEI_jaSmd4_00000",
+        "video_label": 19,
+        "video_style": "PIKE",
+        "min_action": 17,
+        "max_action": 24,
+        "min_video": 0,
+        "max_video": 43
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00001.mp4",
+        "video_name": "xbQCwTHcGN8_00001",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 45,
+        "max_action": 99,
+        "min_video": 0,
+        "max_video": 125
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00260.mp4",
+        "video_name": "xbQCwTHcGN8_00260",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 25,
+        "max_action": 87,
+        "min_video": 0,
+        "max_video": 112
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00147.mp4",
+        "video_name": "JzOshOJgofw_00147",
+        "video_label": 34,
+        "video_style": "PIKE",
+        "min_action": 21,
+        "max_action": 47,
+        "min_video": 0,
+        "max_video": 54
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/V5parOfpuEQ_00182.mp4",
+        "video_name": "V5parOfpuEQ_00182",
+        "video_label": 28,
+        "video_style": "PIKE",
+        "min_action": 37,
+        "max_action": 111,
+        "min_video": 0,
+        "max_video": 143
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/V5parOfpuEQ_00102.mp4",
+        "video_name": "V5parOfpuEQ_00102",
+        "video_label": 45,
+        "video_style": "TUCK",
+        "min_action": 50,
+        "max_action": 127,
+        "min_video": 0,
+        "max_video": 154
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/nOlRwoxsDJ0_00690.mp4",
+        "video_name": "nOlRwoxsDJ0_00690",
+        "video_label": 8,
+        "video_style": "TUCK",
+        "min_action": 72,
+        "max_action": 143,
+        "min_video": 0,
+        "max_video": 196
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/_tigfCJFLZg_00274.mp4",
+        "video_name": "_tigfCJFLZg_00274",
+        "video_label": 45,
+        "video_style": "TUCK",
+        "min_action": 33,
+        "max_action": 98,
+        "min_video": 0,
+        "max_video": 124
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00152.mp4",
+        "video_name": "VNvb5oLOpLg_00152",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 63,
+        "max_action": 117,
+        "min_video": 0,
+        "max_video": 168
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/cYkUl8MrXgA_00311.mp4",
+        "video_name": "cYkUl8MrXgA_00311",
+        "video_label": 45,
+        "video_style": "TUCK",
+        "min_action": 15,
+        "max_action": 38,
+        "min_video": 0,
+        "max_video": 49
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/nOlRwoxsDJ0_00521.mp4",
+        "video_name": "nOlRwoxsDJ0_00521",
+        "video_label": 31,
+        "video_style": "STR",
+        "min_action": 37,
+        "max_action": 106,
+        "min_video": 0,
+        "max_video": 182
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/3N1kUtqJ25A_00104.mp4",
+        "video_name": "3N1kUtqJ25A_00104",
+        "video_label": 44,
+        "video_style": "TUCK",
+        "min_action": 57,
+        "max_action": 142,
+        "min_video": 0,
+        "max_video": 189
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/cYkUl8MrXgA_00260.mp4",
+        "video_name": "cYkUl8MrXgA_00260",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 44,
+        "max_action": 117,
+        "min_video": 0,
+        "max_video": 150
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00191.mp4",
+        "video_name": "JzOshOJgofw_00191",
+        "video_label": 24,
+        "video_style": "TUCK",
+        "min_action": 39,
+        "max_action": 78,
+        "min_video": 0,
+        "max_video": 88
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/Y4ARBzok9aU_00090.mp4",
+        "video_name": "Y4ARBzok9aU_00090",
+        "video_label": 28,
+        "video_style": "PIKE",
+        "min_action": 40,
+        "max_action": 111,
+        "min_video": 0,
+        "max_video": 133
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/OFxuiqI5G44_00142.mp4",
+        "video_name": "OFxuiqI5G44_00142",
+        "video_label": 12,
+        "video_style": "TUCK",
+        "min_action": 61,
+        "max_action": 181,
+        "min_video": 0,
+        "max_video": 220
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00407.mp4",
+        "video_name": "VNvb5oLOpLg_00407",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 136,
+        "max_action": 221,
+        "min_video": 0,
+        "max_video": 250
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/_tigfCJFLZg_00259.mp4",
+        "video_name": "_tigfCJFLZg_00259",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 29,
+        "max_action": 83,
+        "min_video": 0,
+        "max_video": 114
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/zYHstCxnAPA_00371.mp4",
+        "video_name": "zYHstCxnAPA_00371",
+        "video_label": 31,
+        "video_style": "PIKE",
+        "min_action": 57,
+        "max_action": 121,
+        "min_video": 0,
+        "max_video": 151
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00022.mp4",
+        "video_name": "xbQCwTHcGN8_00022",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 24,
+        "max_action": 41,
+        "min_video": 0,
+        "max_video": 52
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/S9aCrmtAV8o_00046.mp4",
+        "video_name": "S9aCrmtAV8o_00046",
+        "video_label": 3,
+        "video_style": "PIKE",
+        "min_action": 27,
+        "max_action": 81,
+        "min_video": 0,
+        "max_video": 136
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/V5parOfpuEQ_00157.mp4",
+        "video_name": "V5parOfpuEQ_00157",
+        "video_label": 14,
+        "video_style": "TUCK",
+        "min_action": 3,
+        "max_action": 29,
+        "min_video": 0,
+        "max_video": 39
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/Bb0ZiYVNtDs_00012.mp4",
+        "video_name": "Bb0ZiYVNtDs_00012",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 32,
+        "max_action": 86,
+        "min_video": 0,
+        "max_video": 114
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00421.mp4",
+        "video_name": "VNvb5oLOpLg_00421",
+        "video_label": 24,
+        "video_style": "PIKE",
+        "min_action": 45,
+        "max_action": 175,
+        "min_video": 0,
+        "max_video": 203
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00542.mp4",
+        "video_name": "VNvb5oLOpLg_00542",
+        "video_label": 30,
+        "video_style": "TUCK",
+        "min_action": 23,
+        "max_action": 127,
+        "min_video": 0,
+        "max_video": 160
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/nOlRwoxsDJ0_00586.mp4",
+        "video_name": "nOlRwoxsDJ0_00586",
+        "video_label": 30,
+        "video_style": "STR",
+        "min_action": 60,
+        "max_action": 87,
+        "min_video": 0,
+        "max_video": 164
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00323.mp4",
+        "video_name": "VNvb5oLOpLg_00323",
+        "video_label": 27,
+        "video_style": "TUCK",
+        "min_action": 24,
+        "max_action": 113,
+        "min_video": 0,
+        "max_video": 159
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/_tigfCJFLZg_00419.mp4",
+        "video_name": "_tigfCJFLZg_00419",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 7,
+        "max_action": 29,
+        "min_video": 0,
+        "max_video": 36
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/siEI_jaSmd4_00028.mp4",
+        "video_name": "siEI_jaSmd4_00028",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 5,
+        "max_action": 15,
+        "min_video": 0,
+        "max_video": 24
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/zYHstCxnAPA_00330.mp4",
+        "video_name": "zYHstCxnAPA_00330",
+        "video_label": 24,
+        "video_style": "PIKE",
+        "min_action": 82,
+        "max_action": 105,
+        "min_video": 0,
+        "max_video": 123
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00145.mp4",
+        "video_name": "VNvb5oLOpLg_00145",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 110,
+        "max_action": 145,
+        "min_video": 0,
+        "max_video": 178
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/nOlRwoxsDJ0_00516.mp4",
+        "video_name": "nOlRwoxsDJ0_00516",
+        "video_label": 31,
+        "video_style": "PIKE",
+        "min_action": 10,
+        "max_action": 66,
+        "min_video": 0,
+        "max_video": 96
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00230.mp4",
+        "video_name": "JzOshOJgofw_00230",
+        "video_label": 44,
+        "video_style": "TUCK",
+        "min_action": 113,
+        "max_action": 134,
+        "min_video": 0,
+        "max_video": 140
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/cYkUl8MrXgA_00156.mp4",
+        "video_name": "cYkUl8MrXgA_00156",
+        "video_label": 35,
+        "video_style": "PIKE",
+        "min_action": 39,
+        "max_action": 72,
+        "min_video": 0,
+        "max_video": 92
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/siEI_jaSmd4_00096.mp4",
+        "video_name": "siEI_jaSmd4_00096",
+        "video_label": 32,
+        "video_style": "TUCK",
+        "min_action": 41,
+        "max_action": 59,
+        "min_video": 0,
+        "max_video": 66
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/V5parOfpuEQ_00241.mp4",
+        "video_name": "V5parOfpuEQ_00241",
+        "video_label": 7,
+        "video_style": "TUCK",
+        "min_action": 14,
+        "max_action": 100,
+        "min_video": 0,
+        "max_video": 126
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00157.mp4",
+        "video_name": "VNvb5oLOpLg_00157",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 104,
+        "max_action": 131,
+        "min_video": 0,
+        "max_video": 152
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00491.mp4",
+        "video_name": "VNvb5oLOpLg_00491",
+        "video_label": 44,
+        "video_style": "TUCK",
+        "min_action": 42,
+        "max_action": 138,
+        "min_video": 0,
+        "max_video": 168
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00417.mp4",
+        "video_name": "VNvb5oLOpLg_00417",
+        "video_label": 26,
+        "video_style": "TUCK",
+        "min_action": 43,
+        "max_action": 138,
+        "min_video": 0,
+        "max_video": 166
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/cYkUl8MrXgA_00271.mp4",
+        "video_name": "cYkUl8MrXgA_00271",
+        "video_label": 11,
+        "video_style": "TUCK",
+        "min_action": 26,
+        "max_action": 52,
+        "min_video": 0,
+        "max_video": 61
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00349.mp4",
+        "video_name": "VNvb5oLOpLg_00349",
+        "video_label": 34,
+        "video_style": "TUCK",
+        "min_action": 54,
+        "max_action": 148,
+        "min_video": 0,
+        "max_video": 184
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00431.mp4",
+        "video_name": "VNvb5oLOpLg_00431",
+        "video_label": 26,
+        "video_style": "PIKE",
+        "min_action": 70,
+        "max_action": 140,
+        "min_video": 0,
+        "max_video": 163
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00179.mp4",
+        "video_name": "xbQCwTHcGN8_00179",
+        "video_label": 45,
+        "video_style": "TUCK",
+        "min_action": 39,
+        "max_action": 65,
+        "min_video": 0,
+        "max_video": 75
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00282.mp4",
+        "video_name": "VNvb5oLOpLg_00282",
+        "video_label": 31,
+        "video_style": "PIKE",
+        "min_action": 130,
+        "max_action": 173,
+        "min_video": 0,
+        "max_video": 197
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00348.mp4",
+        "video_name": "sk8TafuB3lU_00348",
+        "video_label": 33,
+        "video_style": "TUCK",
+        "min_action": 78,
+        "max_action": 171,
+        "min_video": 0,
+        "max_video": 201
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/l6ZoMjD1UtA_00143.mp4",
+        "video_name": "l6ZoMjD1UtA_00143",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 15,
+        "max_action": 31,
+        "min_video": 0,
+        "max_video": 43
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00845.mp4",
+        "video_name": "sk8TafuB3lU_00845",
+        "video_label": 20,
+        "video_style": "STR",
+        "min_action": 81,
+        "max_action": 120,
+        "min_video": 0,
+        "max_video": 149
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/cYkUl8MrXgA_00372.mp4",
+        "video_name": "cYkUl8MrXgA_00372",
+        "video_label": 14,
+        "video_style": "TUCK",
+        "min_action": 55,
+        "max_action": 139,
+        "min_video": 0,
+        "max_video": 166
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/zYHstCxnAPA_00269.mp4",
+        "video_name": "zYHstCxnAPA_00269",
+        "video_label": 44,
+        "video_style": "PIKE",
+        "min_action": 69,
+        "max_action": 124,
+        "min_video": 0,
+        "max_video": 173
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00242.mp4",
+        "video_name": "xbQCwTHcGN8_00242",
+        "video_label": 28,
+        "video_style": "TUCK",
+        "min_action": 20,
+        "max_action": 103,
+        "min_video": 0,
+        "max_video": 125
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/OFxuiqI5G44_00059.mp4",
+        "video_name": "OFxuiqI5G44_00059",
+        "video_label": 44,
+        "video_style": "TUCK",
+        "min_action": 115,
+        "max_action": 156,
+        "min_video": 0,
+        "max_video": 196
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00003.mp4",
+        "video_name": "xbQCwTHcGN8_00003",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 21,
+        "max_action": 48,
+        "min_video": 0,
+        "max_video": 53
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00406.mp4",
+        "video_name": "VNvb5oLOpLg_00406",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 68,
+        "max_action": 106,
+        "min_video": 0,
+        "max_video": 119
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00050.mp4",
+        "video_name": "JzOshOJgofw_00050",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 28,
+        "max_action": 36,
+        "min_video": 0,
+        "max_video": 50
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00708.mp4",
+        "video_name": "sk8TafuB3lU_00708",
+        "video_label": 31,
+        "video_style": "PIKE",
+        "min_action": 66,
+        "max_action": 108,
+        "min_video": 0,
+        "max_video": 209
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/cYkUl8MrXgA_00292.mp4",
+        "video_name": "cYkUl8MrXgA_00292",
+        "video_label": 12,
+        "video_style": "TUCK",
+        "min_action": 42,
+        "max_action": 138,
+        "min_video": 0,
+        "max_video": 152
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/V5parOfpuEQ_00098.mp4",
+        "video_name": "V5parOfpuEQ_00098",
+        "video_label": 13,
+        "video_style": "PIKE",
+        "min_action": 25,
+        "max_action": 50,
+        "min_video": 0,
+        "max_video": 56
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/9BC6ssCjyfg_00101.mp4",
+        "video_name": "9BC6ssCjyfg_00101",
+        "video_label": 26,
+        "video_style": "PIKE",
+        "min_action": 73,
+        "max_action": 157,
+        "min_video": 0,
+        "max_video": 172
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/Bb0ZiYVNtDs_00174.mp4",
+        "video_name": "Bb0ZiYVNtDs_00174",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 15,
+        "max_action": 81,
+        "min_video": 0,
+        "max_video": 102
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00088.mp4",
+        "video_name": "JzOshOJgofw_00088",
+        "video_label": 46,
+        "video_style": "PIKE",
+        "min_action": 31,
+        "max_action": 59,
+        "min_video": 0,
+        "max_video": 72
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00065.mp4",
+        "video_name": "xbQCwTHcGN8_00065",
+        "video_label": 26,
+        "video_style": "PIKE",
+        "min_action": 15,
+        "max_action": 87,
+        "min_video": 0,
+        "max_video": 119
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00258.mp4",
+        "video_name": "JzOshOJgofw_00258",
+        "video_label": 44,
+        "video_style": "TUCK",
+        "min_action": 190,
+        "max_action": 211,
+        "min_video": 0,
+        "max_video": 214
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00140.mp4",
+        "video_name": "sk8TafuB3lU_00140",
+        "video_label": 16,
+        "video_style": "STR",
+        "min_action": 77,
+        "max_action": 108,
+        "min_video": 0,
+        "max_video": 158
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/mGbuP7nT2ck_00073.mp4",
+        "video_name": "mGbuP7nT2ck_00073",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 30,
+        "max_action": 72,
+        "min_video": 0,
+        "max_video": 90
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/V5parOfpuEQ_00166.mp4",
+        "video_name": "V5parOfpuEQ_00166",
+        "video_label": 45,
+        "video_style": "TUCK",
+        "min_action": 12,
+        "max_action": 42,
+        "min_video": 0,
+        "max_video": 49
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/mGbuP7nT2ck_00069.mp4",
+        "video_name": "mGbuP7nT2ck_00069",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 44,
+        "max_action": 92,
+        "min_video": 0,
+        "max_video": 107
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/nOlRwoxsDJ0_00898.mp4",
+        "video_name": "nOlRwoxsDJ0_00898",
+        "video_label": 8,
+        "video_style": "PIKE",
+        "min_action": 36,
+        "max_action": 98,
+        "min_video": 0,
+        "max_video": 116
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00365.mp4",
+        "video_name": "sk8TafuB3lU_00365",
+        "video_label": 24,
+        "video_style": "TUCK",
+        "min_action": 60,
+        "max_action": 114,
+        "min_video": 0,
+        "max_video": 128
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00031.mp4",
+        "video_name": "JzOshOJgofw_00031",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 48,
+        "max_action": 62,
+        "min_video": 0,
+        "max_video": 88
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/cYkUl8MrXgA_00312.mp4",
+        "video_name": "cYkUl8MrXgA_00312",
+        "video_label": 11,
+        "video_style": "TUCK",
+        "min_action": 28,
+        "max_action": 101,
+        "min_video": 0,
+        "max_video": 131
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/Bb0ZiYVNtDs_00169.mp4",
+        "video_name": "Bb0ZiYVNtDs_00169",
+        "video_label": 45,
+        "video_style": "TUCK",
+        "min_action": 71,
+        "max_action": 97,
+        "min_video": 0,
+        "max_video": 103
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/mGbuP7nT2ck_00016.mp4",
+        "video_name": "mGbuP7nT2ck_00016",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 6,
+        "max_action": 34,
+        "min_video": 0,
+        "max_video": 40
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00172.mp4",
+        "video_name": "JzOshOJgofw_00172",
+        "video_label": 33,
+        "video_style": "PIKE",
+        "min_action": 38,
+        "max_action": 61,
+        "min_video": 0,
+        "max_video": 68
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/mGbuP7nT2ck_00092.mp4",
+        "video_name": "mGbuP7nT2ck_00092",
+        "video_label": 43,
+        "video_style": "PIKE",
+        "min_action": 225,
+        "max_action": 251,
+        "min_video": 0,
+        "max_video": 261
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/zYHstCxnAPA_00361.mp4",
+        "video_name": "zYHstCxnAPA_00361",
+        "video_label": 44,
+        "video_style": "PIKE",
+        "min_action": 71,
+        "max_action": 126,
+        "min_video": 0,
+        "max_video": 178
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00213.mp4",
+        "video_name": "VNvb5oLOpLg_00213",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 106,
+        "max_action": 135,
+        "min_video": 0,
+        "max_video": 167
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00185.mp4",
+        "video_name": "xbQCwTHcGN8_00185",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 16,
+        "max_action": 38,
+        "min_video": 0,
+        "max_video": 46
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/cYkUl8MrXgA_00185.mp4",
+        "video_name": "cYkUl8MrXgA_00185",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 16,
+        "max_action": 104,
+        "min_video": 0,
+        "max_video": 116
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/_tigfCJFLZg_00296.mp4",
+        "video_name": "_tigfCJFLZg_00296",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 30,
+        "max_action": 107,
+        "min_video": 0,
+        "max_video": 120
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00263.mp4",
+        "video_name": "xbQCwTHcGN8_00263",
+        "video_label": 45,
+        "video_style": "TUCK",
+        "min_action": 46,
+        "max_action": 123,
+        "min_video": 0,
+        "max_video": 149
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00548.mp4",
+        "video_name": "sk8TafuB3lU_00548",
+        "video_label": 44,
+        "video_style": "TUCK",
+        "min_action": 68,
+        "max_action": 145,
+        "min_video": 0,
+        "max_video": 175
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00460.mp4",
+        "video_name": "VNvb5oLOpLg_00460",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 63,
+        "max_action": 110,
+        "min_video": 0,
+        "max_video": 127
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/nOlRwoxsDJ0_00671.mp4",
+        "video_name": "nOlRwoxsDJ0_00671",
+        "video_label": 35,
+        "video_style": "PIKE",
+        "min_action": 54,
+        "max_action": 114,
+        "min_video": 0,
+        "max_video": 132
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/nOlRwoxsDJ0_00473.mp4",
+        "video_name": "nOlRwoxsDJ0_00473",
+        "video_label": 19,
+        "video_style": "PIKE",
+        "min_action": 43,
+        "max_action": 95,
+        "min_video": 0,
+        "max_video": 118
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00912.mp4",
+        "video_name": "sk8TafuB3lU_00912",
+        "video_label": 31,
+        "video_style": "STR",
+        "min_action": 49,
+        "max_action": 81,
+        "min_video": 0,
+        "max_video": 128
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00158.mp4",
+        "video_name": "VNvb5oLOpLg_00158",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 64,
+        "max_action": 118,
+        "min_video": 0,
+        "max_video": 161
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/_tigfCJFLZg_00321.mp4",
+        "video_name": "_tigfCJFLZg_00321",
+        "video_label": 45,
+        "video_style": "TUCK",
+        "min_action": 33,
+        "max_action": 114,
+        "min_video": 0,
+        "max_video": 134
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/_tigfCJFLZg_00124.mp4",
+        "video_name": "_tigfCJFLZg_00124",
+        "video_label": 26,
+        "video_style": "PIKE",
+        "min_action": 51,
+        "max_action": 135,
+        "min_video": 0,
+        "max_video": 165
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00091.mp4",
+        "video_name": "xbQCwTHcGN8_00091",
+        "video_label": 28,
+        "video_style": "TUCK",
+        "min_action": 38,
+        "max_action": 70,
+        "min_video": 0,
+        "max_video": 74
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00165.mp4",
+        "video_name": "VNvb5oLOpLg_00165",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 36,
+        "max_action": 54,
+        "min_video": 0,
+        "max_video": 83
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00268.mp4",
+        "video_name": "xbQCwTHcGN8_00268",
+        "video_label": 28,
+        "video_style": "TUCK",
+        "min_action": 31,
+        "max_action": 64,
+        "min_video": 0,
+        "max_video": 68
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/kVT_sNgYBAE_00108.mp4",
+        "video_name": "kVT_sNgYBAE_00108",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 45,
+        "max_action": 115,
+        "min_video": 0,
+        "max_video": 136
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/_tigfCJFLZg_00142.mp4",
+        "video_name": "_tigfCJFLZg_00142",
+        "video_label": 12,
+        "video_style": "TUCK",
+        "min_action": 38,
+        "max_action": 110,
+        "min_video": 0,
+        "max_video": 125
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/_tigfCJFLZg_00384.mp4",
+        "video_name": "_tigfCJFLZg_00384",
+        "video_label": 45,
+        "video_style": "TUCK",
+        "min_action": 41,
+        "max_action": 120,
+        "min_video": 0,
+        "max_video": 148
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/V5parOfpuEQ_00181.mp4",
+        "video_name": "V5parOfpuEQ_00181",
+        "video_label": 28,
+        "video_style": "PIKE",
+        "min_action": 39,
+        "max_action": 65,
+        "min_video": 0,
+        "max_video": 74
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/nOlRwoxsDJ0_00739.mp4",
+        "video_name": "nOlRwoxsDJ0_00739",
+        "video_label": 26,
+        "video_style": "PIKE",
+        "min_action": 16,
+        "max_action": 83,
+        "min_video": 0,
+        "max_video": 100
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/3N1kUtqJ25A_00131.mp4",
+        "video_name": "3N1kUtqJ25A_00131",
+        "video_label": 34,
+        "video_style": "TUCK",
+        "min_action": 30,
+        "max_action": 111,
+        "min_video": 0,
+        "max_video": 161
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/siEI_jaSmd4_00081.mp4",
+        "video_name": "siEI_jaSmd4_00081",
+        "video_label": 19,
+        "video_style": "TUCK",
+        "min_action": 24,
+        "max_action": 39,
+        "min_video": 0,
+        "max_video": 51
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00020.mp4",
+        "video_name": "VNvb5oLOpLg_00020",
+        "video_label": 19,
+        "video_style": "PIKE",
+        "min_action": 41,
+        "max_action": 93,
+        "min_video": 0,
+        "max_video": 171
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_01130.mp4",
+        "video_name": "sk8TafuB3lU_01130",
+        "video_label": 44,
+        "video_style": "TUCK",
+        "min_action": 86,
+        "max_action": 173,
+        "min_video": 0,
+        "max_video": 198
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00087.mp4",
+        "video_name": "JzOshOJgofw_00087",
+        "video_label": 46,
+        "video_style": "PIKE",
+        "min_action": 12,
+        "max_action": 28,
+        "min_video": 0,
+        "max_video": 38
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/nOlRwoxsDJ0_00502.mp4",
+        "video_name": "nOlRwoxsDJ0_00502",
+        "video_label": 19,
+        "video_style": "PIKE",
+        "min_action": 23,
+        "max_action": 64,
+        "min_video": 0,
+        "max_video": 103
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/_tigfCJFLZg_00172.mp4",
+        "video_name": "_tigfCJFLZg_00172",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 24,
+        "max_action": 47,
+        "min_video": 0,
+        "max_video": 52
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/Bb0ZiYVNtDs_00125.mp4",
+        "video_name": "Bb0ZiYVNtDs_00125",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 42,
+        "max_action": 113,
+        "min_video": 0,
+        "max_video": 132
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/cYkUl8MrXgA_00136.mp4",
+        "video_name": "cYkUl8MrXgA_00136",
+        "video_label": 28,
+        "video_style": "TUCK",
+        "min_action": 6,
+        "max_action": 28,
+        "min_video": 0,
+        "max_video": 39
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00084.mp4",
+        "video_name": "VNvb5oLOpLg_00084",
+        "video_label": 31,
+        "video_style": "PIKE",
+        "min_action": 42,
+        "max_action": 102,
+        "min_video": 0,
+        "max_video": 162
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/siEI_jaSmd4_00011.mp4",
+        "video_name": "siEI_jaSmd4_00011",
+        "video_label": 19,
+        "video_style": "PIKE",
+        "min_action": 23,
+        "max_action": 35,
+        "min_video": 0,
+        "max_video": 48
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/Q--70-ELqLw_00131.mp4",
+        "video_name": "Q--70-ELqLw_00131",
+        "video_label": 11,
+        "video_style": "PIKE",
+        "min_action": 4,
+        "max_action": 29,
+        "min_video": 0,
+        "max_video": 41
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/cYkUl8MrXgA_00001.mp4",
+        "video_name": "cYkUl8MrXgA_00001",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 21,
+        "max_action": 83,
+        "min_video": 0,
+        "max_video": 120
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00546.mp4",
+        "video_name": "sk8TafuB3lU_00546",
+        "video_label": 44,
+        "video_style": "TUCK",
+        "min_action": 49,
+        "max_action": 129,
+        "min_video": 0,
+        "max_video": 165
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/Bb0ZiYVNtDs_00003.mp4",
+        "video_name": "Bb0ZiYVNtDs_00003",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 60,
+        "max_action": 78,
+        "min_video": 0,
+        "max_video": 89
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00615.mp4",
+        "video_name": "sk8TafuB3lU_00615",
+        "video_label": 3,
+        "video_style": "TUCK",
+        "min_action": 48,
+        "max_action": 137,
+        "min_video": 0,
+        "max_video": 151
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/cYkUl8MrXgA_00378.mp4",
+        "video_name": "cYkUl8MrXgA_00378",
+        "video_label": 12,
+        "video_style": "PIKE",
+        "min_action": 32,
+        "max_action": 113,
+        "min_video": 0,
+        "max_video": 134
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/Bb0ZiYVNtDs_00026.mp4",
+        "video_name": "Bb0ZiYVNtDs_00026",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 22,
+        "max_action": 40,
+        "min_video": 0,
+        "max_video": 51
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00055.mp4",
+        "video_name": "xbQCwTHcGN8_00055",
+        "video_label": 43,
+        "video_style": "PIKE",
+        "min_action": 75,
+        "max_action": 95,
+        "min_video": 0,
+        "max_video": 106
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00061.mp4",
+        "video_name": "xbQCwTHcGN8_00061",
+        "video_label": 12,
+        "video_style": "TUCK",
+        "min_action": 46,
+        "max_action": 71,
+        "min_video": 0,
+        "max_video": 77
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00327.mp4",
+        "video_name": "VNvb5oLOpLg_00327",
+        "video_label": 34,
+        "video_style": "TUCK",
+        "min_action": 37,
+        "max_action": 158,
+        "min_video": 0,
+        "max_video": 188
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00251.mp4",
+        "video_name": "xbQCwTHcGN8_00251",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 28,
+        "max_action": 101,
+        "min_video": 0,
+        "max_video": 114
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/cYkUl8MrXgA_00158.mp4",
+        "video_name": "cYkUl8MrXgA_00158",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 33,
+        "max_action": 121,
+        "min_video": 0,
+        "max_video": 145
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/_tigfCJFLZg_00395.mp4",
+        "video_name": "_tigfCJFLZg_00395",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 16,
+        "max_action": 36,
+        "min_video": 0,
+        "max_video": 45
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/cYkUl8MrXgA_00298.mp4",
+        "video_name": "cYkUl8MrXgA_00298",
+        "video_label": 45,
+        "video_style": "TUCK",
+        "min_action": 31,
+        "max_action": 120,
+        "min_video": 0,
+        "max_video": 142
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/zYHstCxnAPA_00114.mp4",
+        "video_name": "zYHstCxnAPA_00114",
+        "video_label": 36,
+        "video_style": "STR",
+        "min_action": 35,
+        "max_action": 77,
+        "min_video": 0,
+        "max_video": 142
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00246.mp4",
+        "video_name": "VNvb5oLOpLg_00246",
+        "video_label": 31,
+        "video_style": "PIKE",
+        "min_action": 68,
+        "max_action": 149,
+        "min_video": 0,
+        "max_video": 185
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/9BC6ssCjyfg_00151.mp4",
+        "video_name": "9BC6ssCjyfg_00151",
+        "video_label": 45,
+        "video_style": "TUCK",
+        "min_action": 21,
+        "max_action": 46,
+        "min_video": 0,
+        "max_video": 54
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/nOlRwoxsDJ0_00651.mp4",
+        "video_name": "nOlRwoxsDJ0_00651",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 24,
+        "max_action": 50,
+        "min_video": 0,
+        "max_video": 96
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/cYkUl8MrXgA_00124.mp4",
+        "video_name": "cYkUl8MrXgA_00124",
+        "video_label": 26,
+        "video_style": "TUCK",
+        "min_action": 22,
+        "max_action": 49,
+        "min_video": 0,
+        "max_video": 57
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/9BC6ssCjyfg_00138.mp4",
+        "video_name": "9BC6ssCjyfg_00138",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 53,
+        "max_action": 76,
+        "min_video": 0,
+        "max_video": 82
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/kVT_sNgYBAE_00086.mp4",
+        "video_name": "kVT_sNgYBAE_00086",
+        "video_label": 12,
+        "video_style": "TUCK",
+        "min_action": 108,
+        "max_action": 181,
+        "min_video": 0,
+        "max_video": 199
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00073.mp4",
+        "video_name": "VNvb5oLOpLg_00073",
+        "video_label": 19,
+        "video_style": "PIKE",
+        "min_action": 43,
+        "max_action": 70,
+        "min_video": 0,
+        "max_video": 108
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00134.mp4",
+        "video_name": "VNvb5oLOpLg_00134",
+        "video_label": 19,
+        "video_style": "PIKE",
+        "min_action": 61,
+        "max_action": 102,
+        "min_video": 0,
+        "max_video": 199
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00478.mp4",
+        "video_name": "sk8TafuB3lU_00478",
+        "video_label": 24,
+        "video_style": "TUCK",
+        "min_action": 69,
+        "max_action": 158,
+        "min_video": 0,
+        "max_video": 186
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00254.mp4",
+        "video_name": "xbQCwTHcGN8_00254",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 22,
+        "max_action": 103,
+        "min_video": 0,
+        "max_video": 108
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00045.mp4",
+        "video_name": "JzOshOJgofw_00045",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 77,
+        "max_action": 98,
+        "min_video": 0,
+        "max_video": 114
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/zYHstCxnAPA_00042.mp4",
+        "video_name": "zYHstCxnAPA_00042",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 71,
+        "max_action": 111,
+        "min_video": 0,
+        "max_video": 137
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/cYkUl8MrXgA_00010.mp4",
+        "video_name": "cYkUl8MrXgA_00010",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 27,
+        "max_action": 121,
+        "min_video": 0,
+        "max_video": 152
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00389.mp4",
+        "video_name": "VNvb5oLOpLg_00389",
+        "video_label": 44,
+        "video_style": "TUCK",
+        "min_action": 72,
+        "max_action": 165,
+        "min_video": 0,
+        "max_video": 201
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/Bb0ZiYVNtDs_00008.mp4",
+        "video_name": "Bb0ZiYVNtDs_00008",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 13,
+        "max_action": 30,
+        "min_video": 0,
+        "max_video": 39
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/_tigfCJFLZg_00115.mp4",
+        "video_name": "_tigfCJFLZg_00115",
+        "video_label": 26,
+        "video_style": "PIKE",
+        "min_action": 25,
+        "max_action": 103,
+        "min_video": 0,
+        "max_video": 124
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00560.mp4",
+        "video_name": "sk8TafuB3lU_00560",
+        "video_label": 44,
+        "video_style": "TUCK",
+        "min_action": 51,
+        "max_action": 136,
+        "min_video": 0,
+        "max_video": 168
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/V5parOfpuEQ_00089.mp4",
+        "video_name": "V5parOfpuEQ_00089",
+        "video_label": 28,
+        "video_style": "TUCK",
+        "min_action": 45,
+        "max_action": 76,
+        "min_video": 0,
+        "max_video": 82
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/Y4ARBzok9aU_00104.mp4",
+        "video_name": "Y4ARBzok9aU_00104",
+        "video_label": 12,
+        "video_style": "TUCK",
+        "min_action": 42,
+        "max_action": 69,
+        "min_video": 0,
+        "max_video": 77
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00238.mp4",
+        "video_name": "VNvb5oLOpLg_00238",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 75,
+        "max_action": 121,
+        "min_video": 0,
+        "max_video": 156
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/V5parOfpuEQ_00169.mp4",
+        "video_name": "V5parOfpuEQ_00169",
+        "video_label": 12,
+        "video_style": "TUCK",
+        "min_action": 31,
+        "max_action": 58,
+        "min_video": 0,
+        "max_video": 66
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00022.mp4",
+        "video_name": "VNvb5oLOpLg_00022",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 29,
+        "max_action": 65,
+        "min_video": 0,
+        "max_video": 130
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/Bb0ZiYVNtDs_00077.mp4",
+        "video_name": "Bb0ZiYVNtDs_00077",
+        "video_label": 28,
+        "video_style": "TUCK",
+        "min_action": 27,
+        "max_action": 115,
+        "min_video": 0,
+        "max_video": 131
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00168.mp4",
+        "video_name": "xbQCwTHcGN8_00168",
+        "video_label": 45,
+        "video_style": "TUCK",
+        "min_action": 34,
+        "max_action": 111,
+        "min_video": 0,
+        "max_video": 129
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/_tigfCJFLZg_00040.mp4",
+        "video_name": "_tigfCJFLZg_00040",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 30,
+        "max_action": 44,
+        "min_video": 0,
+        "max_video": 54
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00054.mp4",
+        "video_name": "VNvb5oLOpLg_00054",
+        "video_label": 19,
+        "video_style": "PIKE",
+        "min_action": 64,
+        "max_action": 123,
+        "min_video": 0,
+        "max_video": 189
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/Bb0ZiYVNtDs_00039.mp4",
+        "video_name": "Bb0ZiYVNtDs_00039",
+        "video_label": 26,
+        "video_style": "PIKE",
+        "min_action": 57,
+        "max_action": 85,
+        "min_video": 0,
+        "max_video": 90
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/cYkUl8MrXgA_00324.mp4",
+        "video_name": "cYkUl8MrXgA_00324",
+        "video_label": 45,
+        "video_style": "TUCK",
+        "min_action": 51,
+        "max_action": 125,
+        "min_video": 0,
+        "max_video": 146
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/_tigfCJFLZg_00022.mp4",
+        "video_name": "_tigfCJFLZg_00022",
+        "video_label": 33,
+        "video_style": "PIKE",
+        "min_action": 39,
+        "max_action": 87,
+        "min_video": 0,
+        "max_video": 111
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00110.mp4",
+        "video_name": "sk8TafuB3lU_00110",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 75,
+        "max_action": 112,
+        "min_video": 0,
+        "max_video": 146
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00138.mp4",
+        "video_name": "sk8TafuB3lU_00138",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 148,
+        "max_action": 185,
+        "min_video": 0,
+        "max_video": 231
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/V5parOfpuEQ_00124.mp4",
+        "video_name": "V5parOfpuEQ_00124",
+        "video_label": 14,
+        "video_style": "TUCK",
+        "min_action": 11,
+        "max_action": 43,
+        "min_video": 0,
+        "max_video": 47
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/Y4ARBzok9aU_00149.mp4",
+        "video_name": "Y4ARBzok9aU_00149",
+        "video_label": 11,
+        "video_style": "TUCK",
+        "min_action": 50,
+        "max_action": 126,
+        "min_video": 0,
+        "max_video": 157
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/zYHstCxnAPA_00291.mp4",
+        "video_name": "zYHstCxnAPA_00291",
+        "video_label": 41,
+        "video_style": "TUCK",
+        "min_action": 27,
+        "max_action": 122,
+        "min_video": 0,
+        "max_video": 140
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/Y4ARBzok9aU_00084.mp4",
+        "video_name": "Y4ARBzok9aU_00084",
+        "video_label": 45,
+        "video_style": "TUCK",
+        "min_action": 34,
+        "max_action": 134,
+        "min_video": 0,
+        "max_video": 143
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00254.mp4",
+        "video_name": "VNvb5oLOpLg_00254",
+        "video_label": 31,
+        "video_style": "STR",
+        "min_action": 117,
+        "max_action": 149,
+        "min_video": 0,
+        "max_video": 182
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_01177.mp4",
+        "video_name": "sk8TafuB3lU_01177",
+        "video_label": 8,
+        "video_style": "TUCK",
+        "min_action": 43,
+        "max_action": 129,
+        "min_video": 0,
+        "max_video": 157
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00692.mp4",
+        "video_name": "VNvb5oLOpLg_00692",
+        "video_label": 31,
+        "video_style": "STR",
+        "min_action": 80,
+        "max_action": 111,
+        "min_video": 0,
+        "max_video": 217
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/V5parOfpuEQ_00010.mp4",
+        "video_name": "V5parOfpuEQ_00010",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 56,
+        "max_action": 127,
+        "min_video": 0,
+        "max_video": 148
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00473.mp4",
+        "video_name": "VNvb5oLOpLg_00473",
+        "video_label": 7,
+        "video_style": "TUCK",
+        "min_action": 62,
+        "max_action": 133,
+        "min_video": 0,
+        "max_video": 182
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00392.mp4",
+        "video_name": "sk8TafuB3lU_00392",
+        "video_label": 8,
+        "video_style": "PIKE",
+        "min_action": 51,
+        "max_action": 105,
+        "min_video": 0,
+        "max_video": 159
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/TeboS8s_00w_00100.mp4",
+        "video_name": "TeboS8s_00w_00100",
+        "video_label": 12,
+        "video_style": "TUCK",
+        "min_action": 40,
+        "max_action": 101,
+        "min_video": 0,
+        "max_video": 118
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/cYkUl8MrXgA_00280.mp4",
+        "video_name": "cYkUl8MrXgA_00280",
+        "video_label": 14,
+        "video_style": "PIKE",
+        "min_action": 67,
+        "max_action": 90,
+        "min_video": 0,
+        "max_video": 100
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_01010.mp4",
+        "video_name": "sk8TafuB3lU_01010",
+        "video_label": 35,
+        "video_style": "PIKE",
+        "min_action": 59,
+        "max_action": 155,
+        "min_video": 0,
+        "max_video": 201
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/mGbuP7nT2ck_00019.mp4",
+        "video_name": "mGbuP7nT2ck_00019",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 22,
+        "max_action": 68,
+        "min_video": 0,
+        "max_video": 80
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00568.mp4",
+        "video_name": "VNvb5oLOpLg_00568",
+        "video_label": 19,
+        "video_style": "TUCK",
+        "min_action": 61,
+        "max_action": 148,
+        "min_video": 0,
+        "max_video": 177
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00561.mp4",
+        "video_name": "VNvb5oLOpLg_00561",
+        "video_label": 27,
+        "video_style": "PIKE",
+        "min_action": 152,
+        "max_action": 194,
+        "min_video": 0,
+        "max_video": 218
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/cYkUl8MrXgA_00134.mp4",
+        "video_name": "cYkUl8MrXgA_00134",
+        "video_label": 28,
+        "video_style": "TUCK",
+        "min_action": 52,
+        "max_action": 118,
+        "min_video": 0,
+        "max_video": 142
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00091.mp4",
+        "video_name": "JzOshOJgofw_00091",
+        "video_label": 31,
+        "video_style": "STR",
+        "min_action": 63,
+        "max_action": 81,
+        "min_video": 0,
+        "max_video": 87
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00484.mp4",
+        "video_name": "sk8TafuB3lU_00484",
+        "video_label": 44,
+        "video_style": "TUCK",
+        "min_action": 39,
+        "max_action": 131,
+        "min_video": 0,
+        "max_video": 158
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/zYHstCxnAPA_00301.mp4",
+        "video_name": "zYHstCxnAPA_00301",
+        "video_label": 44,
+        "video_style": "TUCK",
+        "min_action": 66,
+        "max_action": 145,
+        "min_video": 0,
+        "max_video": 176
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00723.mp4",
+        "video_name": "sk8TafuB3lU_00723",
+        "video_label": 20,
+        "video_style": "PIKE",
+        "min_action": 46,
+        "max_action": 89,
+        "min_video": 0,
+        "max_video": 162
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00112.mp4",
+        "video_name": "VNvb5oLOpLg_00112",
+        "video_label": 31,
+        "video_style": "PIKE",
+        "min_action": 42,
+        "max_action": 103,
+        "min_video": 0,
+        "max_video": 150
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00148.mp4",
+        "video_name": "sk8TafuB3lU_00148",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 33,
+        "max_action": 47,
+        "min_video": 0,
+        "max_video": 78
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00111.mp4",
+        "video_name": "VNvb5oLOpLg_00111",
+        "video_label": 31,
+        "video_style": "PIKE",
+        "min_action": 23,
+        "max_action": 59,
+        "min_video": 0,
+        "max_video": 75
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00263.mp4",
+        "video_name": "JzOshOJgofw_00263",
+        "video_label": 44,
+        "video_style": "TUCK",
+        "min_action": 92,
+        "max_action": 128,
+        "min_video": 0,
+        "max_video": 135
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00009.mp4",
+        "video_name": "VNvb5oLOpLg_00009",
+        "video_label": 32,
+        "video_style": "TUCK",
+        "min_action": 65,
+        "max_action": 107,
+        "min_video": 0,
+        "max_video": 125
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00116.mp4",
+        "video_name": "VNvb5oLOpLg_00116",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 67,
+        "max_action": 108,
+        "min_video": 0,
+        "max_video": 171
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00234.mp4",
+        "video_name": "sk8TafuB3lU_00234",
+        "video_label": 31,
+        "video_style": "STR",
+        "min_action": 92,
+        "max_action": 140,
+        "min_video": 0,
+        "max_video": 190
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/cYkUl8MrXgA_00003.mp4",
+        "video_name": "cYkUl8MrXgA_00003",
+        "video_label": 35,
+        "video_style": "TUCK",
+        "min_action": 10,
+        "max_action": 36,
+        "min_video": 0,
+        "max_video": 45
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00707.mp4",
+        "video_name": "sk8TafuB3lU_00707",
+        "video_label": 31,
+        "video_style": "PIKE",
+        "min_action": 17,
+        "max_action": 30,
+        "min_video": 0,
+        "max_video": 77
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/siEI_jaSmd4_00089.mp4",
+        "video_name": "siEI_jaSmd4_00089",
+        "video_label": 8,
+        "video_style": "PIKE",
+        "min_action": 75,
+        "max_action": 92,
+        "min_video": 0,
+        "max_video": 98
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00071.mp4",
+        "video_name": "VNvb5oLOpLg_00071",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 40,
+        "max_action": 69,
+        "min_video": 0,
+        "max_video": 95
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00048.mp4",
+        "video_name": "JzOshOJgofw_00048",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 58,
+        "max_action": 71,
+        "min_video": 0,
+        "max_video": 81
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/zYHstCxnAPA_00287.mp4",
+        "video_name": "zYHstCxnAPA_00287",
+        "video_label": 31,
+        "video_style": "PIKE",
+        "min_action": 83,
+        "max_action": 122,
+        "min_video": 0,
+        "max_video": 152
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00639.mp4",
+        "video_name": "sk8TafuB3lU_00639",
+        "video_label": 19,
+        "video_style": "PIKE",
+        "min_action": 67,
+        "max_action": 105,
+        "min_video": 0,
+        "max_video": 152
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00094.mp4",
+        "video_name": "sk8TafuB3lU_00094",
+        "video_label": 31,
+        "video_style": "STR",
+        "min_action": 82,
+        "max_action": 130,
+        "min_video": 0,
+        "max_video": 174
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00112.mp4",
+        "video_name": "xbQCwTHcGN8_00112",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 7,
+        "max_action": 25,
+        "min_video": 0,
+        "max_video": 34
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00150.mp4",
+        "video_name": "sk8TafuB3lU_00150",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 10,
+        "max_action": 29,
+        "min_video": 0,
+        "max_video": 68
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00084.mp4",
+        "video_name": "sk8TafuB3lU_00084",
+        "video_label": 16,
+        "video_style": "STR",
+        "min_action": 77,
+        "max_action": 116,
+        "min_video": 0,
+        "max_video": 168
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00077.mp4",
+        "video_name": "sk8TafuB3lU_00077",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 34,
+        "max_action": 49,
+        "min_video": 0,
+        "max_video": 76
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00137.mp4",
+        "video_name": "xbQCwTHcGN8_00137",
+        "video_label": 43,
+        "video_style": "PIKE",
+        "min_action": 71,
+        "max_action": 121,
+        "min_video": 0,
+        "max_video": 151
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/V5parOfpuEQ_00019.mp4",
+        "video_name": "V5parOfpuEQ_00019",
+        "video_label": 29,
+        "video_style": "PIKE",
+        "min_action": 58,
+        "max_action": 147,
+        "min_video": 0,
+        "max_video": 161
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00136.mp4",
+        "video_name": "sk8TafuB3lU_00136",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 82,
+        "max_action": 119,
+        "min_video": 0,
+        "max_video": 168
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/V5parOfpuEQ_00205.mp4",
+        "video_name": "V5parOfpuEQ_00205",
+        "video_label": 13,
+        "video_style": "PIKE",
+        "min_action": 47,
+        "max_action": 71,
+        "min_video": 0,
+        "max_video": 78
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00034.mp4",
+        "video_name": "xbQCwTHcGN8_00034",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 24,
+        "max_action": 40,
+        "min_video": 0,
+        "max_video": 48
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00083.mp4",
+        "video_name": "sk8TafuB3lU_00083",
+        "video_label": 16,
+        "video_style": "STR",
+        "min_action": 80,
+        "max_action": 103,
+        "min_video": 0,
+        "max_video": 122
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/nOlRwoxsDJ0_00517.mp4",
+        "video_name": "nOlRwoxsDJ0_00517",
+        "video_label": 31,
+        "video_style": "PIKE",
+        "min_action": 39,
+        "max_action": 117,
+        "min_video": 0,
+        "max_video": 189
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00133.mp4",
+        "video_name": "VNvb5oLOpLg_00133",
+        "video_label": 19,
+        "video_style": "PIKE",
+        "min_action": 31,
+        "max_action": 52,
+        "min_video": 0,
+        "max_video": 98
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00178.mp4",
+        "video_name": "sk8TafuB3lU_00178",
+        "video_label": 16,
+        "video_style": "STR",
+        "min_action": 69,
+        "max_action": 85,
+        "min_video": 0,
+        "max_video": 111
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/nOlRwoxsDJ0_00611.mp4",
+        "video_name": "nOlRwoxsDJ0_00611",
+        "video_label": 31,
+        "video_style": "STR",
+        "min_action": 61,
+        "max_action": 83,
+        "min_video": 0,
+        "max_video": 126
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/xbQCwTHcGN8_00035.mp4",
+        "video_name": "xbQCwTHcGN8_00035",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 43,
+        "max_action": 96,
+        "min_video": 0,
+        "max_video": 124
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/zYHstCxnAPA_00286.mp4",
+        "video_name": "zYHstCxnAPA_00286",
+        "video_label": 3,
+        "video_style": "PIKE",
+        "min_action": 116,
+        "max_action": 142,
+        "min_video": 0,
+        "max_video": 158
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/_tigfCJFLZg_00213.mp4",
+        "video_name": "_tigfCJFLZg_00213",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 18,
+        "max_action": 76,
+        "min_video": 0,
+        "max_video": 101
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00229.mp4",
+        "video_name": "VNvb5oLOpLg_00229",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 0,
+        "max_action": 14,
+        "min_video": 0,
+        "max_video": 49
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00704.mp4",
+        "video_name": "sk8TafuB3lU_00704",
+        "video_label": 15,
+        "video_style": "PIKE",
+        "min_action": 24,
+        "max_action": 47,
+        "min_video": 0,
+        "max_video": 85
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/_tigfCJFLZg_00194.mp4",
+        "video_name": "_tigfCJFLZg_00194",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 56,
+        "max_action": 107,
+        "min_video": 0,
+        "max_video": 128
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/_tigfCJFLZg_00184.mp4",
+        "video_name": "_tigfCJFLZg_00184",
+        "video_label": 26,
+        "video_style": "PIKE",
+        "min_action": 33,
+        "max_action": 60,
+        "min_video": 0,
+        "max_video": 66
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00085.mp4",
+        "video_name": "VNvb5oLOpLg_00085",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 126,
+        "max_action": 146,
+        "min_video": 0,
+        "max_video": 176
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00435.mp4",
+        "video_name": "VNvb5oLOpLg_00435",
+        "video_label": 34,
+        "video_style": "PIKE",
+        "min_action": 34,
+        "max_action": 162,
+        "min_video": 0,
+        "max_video": 174
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00175.mp4",
+        "video_name": "VNvb5oLOpLg_00175",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 90,
+        "max_action": 106,
+        "min_video": 0,
+        "max_video": 119
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00148.mp4",
+        "video_name": "VNvb5oLOpLg_00148",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 81,
+        "max_action": 125,
+        "min_video": 0,
+        "max_video": 182
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/_tigfCJFLZg_00268.mp4",
+        "video_name": "_tigfCJFLZg_00268",
+        "video_label": 7,
+        "video_style": "PIKE",
+        "min_action": 26,
+        "max_action": 75,
+        "min_video": 0,
+        "max_video": 99
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/nOlRwoxsDJ0_00600.mp4",
+        "video_name": "nOlRwoxsDJ0_00600",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 36,
+        "max_action": 68,
+        "min_video": 0,
+        "max_video": 180
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00170.mp4",
+        "video_name": "sk8TafuB3lU_00170",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 45,
+        "max_action": 59,
+        "min_video": 0,
+        "max_video": 88
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00251.mp4",
+        "video_name": "JzOshOJgofw_00251",
+        "video_label": 34,
+        "video_style": "PIKE",
+        "min_action": 41,
+        "max_action": 68,
+        "min_video": 0,
+        "max_video": 76
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/siEI_jaSmd4_00031.mp4",
+        "video_name": "siEI_jaSmd4_00031",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 20,
+        "max_action": 28,
+        "min_video": 0,
+        "max_video": 44
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00096.mp4",
+        "video_name": "VNvb5oLOpLg_00096",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 70,
+        "max_action": 123,
+        "min_video": 0,
+        "max_video": 177
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00098.mp4",
+        "video_name": "VNvb5oLOpLg_00098",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 127,
+        "max_action": 167,
+        "min_video": 0,
+        "max_video": 234
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00091.mp4",
+        "video_name": "VNvb5oLOpLg_00091",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 52,
+        "max_action": 68,
+        "min_video": 0,
+        "max_video": 101
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/siEI_jaSmd4_00029.mp4",
+        "video_name": "siEI_jaSmd4_00029",
+        "video_label": 16,
+        "video_style": "STR",
+        "min_action": 33,
+        "max_action": 41,
+        "min_video": 0,
+        "max_video": 56
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00239.mp4",
+        "video_name": "VNvb5oLOpLg_00239",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 20,
+        "max_action": 39,
+        "min_video": 0,
+        "max_video": 70
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00059.mp4",
+        "video_name": "JzOshOJgofw_00059",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 71,
+        "max_action": 75,
+        "min_video": 0,
+        "max_video": 90
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00102.mp4",
+        "video_name": "VNvb5oLOpLg_00102",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 84,
+        "max_action": 114,
+        "min_video": 0,
+        "max_video": 245
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00942.mp4",
+        "video_name": "sk8TafuB3lU_00942",
+        "video_label": 34,
+        "video_style": "STR",
+        "min_action": 72,
+        "max_action": 103,
+        "min_video": 0,
+        "max_video": 169
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00115.mp4",
+        "video_name": "sk8TafuB3lU_00115",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 54,
+        "max_action": 68,
+        "min_video": 0,
+        "max_video": 85
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00025.mp4",
+        "video_name": "JzOshOJgofw_00025",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 103,
+        "max_action": 118,
+        "min_video": 0,
+        "max_video": 144
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00039.mp4",
+        "video_name": "JzOshOJgofw_00039",
+        "video_label": 47,
+        "video_style": "STR",
+        "min_action": 17,
+        "max_action": 32,
+        "min_video": 0,
+        "max_video": 53
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00171.mp4",
+        "video_name": "sk8TafuB3lU_00171",
+        "video_label": 4,
+        "video_style": "STR",
+        "min_action": 67,
+        "max_action": 101,
+        "min_video": 0,
+        "max_video": 149
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00168.mp4",
+        "video_name": "VNvb5oLOpLg_00168",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 50,
+        "max_action": 83,
+        "min_video": 0,
+        "max_video": 149
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00033.mp4",
+        "video_name": "JzOshOJgofw_00033",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 63,
+        "max_action": 74,
+        "min_video": 0,
+        "max_video": 88
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00113.mp4",
+        "video_name": "sk8TafuB3lU_00113",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 126,
+        "max_action": 153,
+        "min_video": 0,
+        "max_video": 172
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00057.mp4",
+        "video_name": "JzOshOJgofw_00057",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 66,
+        "max_action": 74,
+        "min_video": 0,
+        "max_video": 85
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/zYHstCxnAPA_00113.mp4",
+        "video_name": "zYHstCxnAPA_00113",
+        "video_label": 36,
+        "video_style": "STR",
+        "min_action": 0,
+        "max_action": 6,
+        "min_video": 0,
+        "max_video": 37
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/zYHstCxnAPA_00055.mp4",
+        "video_name": "zYHstCxnAPA_00055",
+        "video_label": 47,
+        "video_style": "STR",
+        "min_action": 38,
+        "max_action": 56,
+        "min_video": 0,
+        "max_video": 75
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00054.mp4",
+        "video_name": "JzOshOJgofw_00054",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 48,
+        "max_action": 60,
+        "min_video": 0,
+        "max_video": 73
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00178.mp4",
+        "video_name": "VNvb5oLOpLg_00178",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 77,
+        "max_action": 132,
+        "min_video": 0,
+        "max_video": 163
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00230.mp4",
+        "video_name": "VNvb5oLOpLg_00230",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 65,
+        "max_action": 94,
+        "min_video": 0,
+        "max_video": 191
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00200.mp4",
+        "video_name": "sk8TafuB3lU_00200",
+        "video_label": 36,
+        "video_style": "STR",
+        "min_action": 148,
+        "max_action": 169,
+        "min_video": 0,
+        "max_video": 195
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00781.mp4",
+        "video_name": "sk8TafuB3lU_00781",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 18,
+        "max_action": 42,
+        "min_video": 0,
+        "max_video": 76
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00164.mp4",
+        "video_name": "sk8TafuB3lU_00164",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 70,
+        "max_action": 109,
+        "min_video": 0,
+        "max_video": 165
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/siEI_jaSmd4_00019.mp4",
+        "video_name": "siEI_jaSmd4_00019",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 72,
+        "max_action": 81,
+        "min_video": 0,
+        "max_video": 93
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/nOlRwoxsDJ0_00571.mp4",
+        "video_name": "nOlRwoxsDJ0_00571",
+        "video_label": 20,
+        "video_style": "STR",
+        "min_action": 38,
+        "max_action": 97,
+        "min_video": 0,
+        "max_video": 191
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00037.mp4",
+        "video_name": "JzOshOJgofw_00037",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 44,
+        "max_action": 56,
+        "min_video": 0,
+        "max_video": 78
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/zYHstCxnAPA_00058.mp4",
+        "video_name": "zYHstCxnAPA_00058",
+        "video_label": 36,
+        "video_style": "STR",
+        "min_action": 57,
+        "max_action": 89,
+        "min_video": 0,
+        "max_video": 136
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/nOlRwoxsDJ0_00652.mp4",
+        "video_name": "nOlRwoxsDJ0_00652",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 67,
+        "max_action": 115,
+        "min_video": 0,
+        "max_video": 205
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00182.mp4",
+        "video_name": "sk8TafuB3lU_00182",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 37,
+        "max_action": 75,
+        "min_video": 0,
+        "max_video": 137
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00782.mp4",
+        "video_name": "sk8TafuB3lU_00782",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 34,
+        "max_action": 79,
+        "min_video": 0,
+        "max_video": 144
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00174.mp4",
+        "video_name": "VNvb5oLOpLg_00174",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 91,
+        "max_action": 145,
+        "min_video": 0,
+        "max_video": 195
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00081.mp4",
+        "video_name": "VNvb5oLOpLg_00081",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 33,
+        "max_action": 56,
+        "min_video": 0,
+        "max_video": 81
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/zYHstCxnAPA_00097.mp4",
+        "video_name": "zYHstCxnAPA_00097",
+        "video_label": 32,
+        "video_style": "STR",
+        "min_action": 65,
+        "max_action": 98,
+        "min_video": 0,
+        "max_video": 155
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/nOlRwoxsDJ0_00562.mp4",
+        "video_name": "nOlRwoxsDJ0_00562",
+        "video_label": 31,
+        "video_style": "STR",
+        "min_action": 29,
+        "max_action": 58,
+        "min_video": 0,
+        "max_video": 92
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00044.mp4",
+        "video_name": "JzOshOJgofw_00044",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 58,
+        "max_action": 70,
+        "min_video": 0,
+        "max_video": 85
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00198.mp4",
+        "video_name": "sk8TafuB3lU_00198",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 61,
+        "max_action": 80,
+        "min_video": 0,
+        "max_video": 113
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00255.mp4",
+        "video_name": "VNvb5oLOpLg_00255",
+        "video_label": 31,
+        "video_style": "STR",
+        "min_action": 50,
+        "max_action": 104,
+        "min_video": 0,
+        "max_video": 165
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00201.mp4",
+        "video_name": "VNvb5oLOpLg_00201",
+        "video_label": 31,
+        "video_style": "STR",
+        "min_action": 41,
+        "max_action": 64,
+        "min_video": 0,
+        "max_video": 96
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/zYHstCxnAPA_00051.mp4",
+        "video_name": "zYHstCxnAPA_00051",
+        "video_label": 19,
+        "video_style": "STR",
+        "min_action": 139,
+        "max_action": 154,
+        "min_video": 0,
+        "max_video": 176
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00804.mp4",
+        "video_name": "sk8TafuB3lU_00804",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 20,
+        "max_action": 46,
+        "min_video": 0,
+        "max_video": 72
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00023.mp4",
+        "video_name": "JzOshOJgofw_00023",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 22,
+        "max_action": 37,
+        "min_video": 0,
+        "max_video": 57
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00003.mp4",
+        "video_name": "VNvb5oLOpLg_00003",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 33,
+        "max_action": 50,
+        "min_video": 0,
+        "max_video": 82
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00793.mp4",
+        "video_name": "sk8TafuB3lU_00793",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 92,
+        "max_action": 113,
+        "min_video": 0,
+        "max_video": 145
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00135.mp4",
+        "video_name": "VNvb5oLOpLg_00135",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 18,
+        "max_action": 33,
+        "min_video": 0,
+        "max_video": 66
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/JzOshOJgofw_00017.mp4",
+        "video_name": "JzOshOJgofw_00017",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 30,
+        "max_action": 43,
+        "min_video": 0,
+        "max_video": 67
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00109.mp4",
+        "video_name": "sk8TafuB3lU_00109",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 52,
+        "max_action": 65,
+        "min_video": 0,
+        "max_video": 92
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/sk8TafuB3lU_00729.mp4",
+        "video_name": "sk8TafuB3lU_00729",
+        "video_label": 31,
+        "video_style": "STR",
+        "min_action": 124,
+        "max_action": 178,
+        "min_video": 0,
+        "max_video": 236
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/nOlRwoxsDJ0_00592.mp4",
+        "video_name": "nOlRwoxsDJ0_00592",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 61,
+        "max_action": 113,
+        "min_video": 0,
+        "max_video": 209
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00115.mp4",
+        "video_name": "VNvb5oLOpLg_00115",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 50,
+        "max_action": 70,
+        "min_video": 0,
+        "max_video": 93
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/VNvb5oLOpLg_00021.mp4",
+        "video_name": "VNvb5oLOpLg_00021",
+        "video_label": 15,
+        "video_style": "STR",
+        "min_action": 135,
+        "max_action": 150,
+        "min_video": 0,
+        "max_video": 173
+    },
+    {
+        "video_path": "/home/bsespede/Drive/Study/TU Graz/Materias/710.094 Image understanding/Practical/Image-and-video-understanding/src/Diving48_rgb/rgb/siEI_jaSmd4_00020.mp4",
+        "video_name": "siEI_jaSmd4_00020",
+        "video_label": 46,
+        "video_style": "STR",
+        "min_action": 11,
+        "max_action": 19,
+        "min_video": 0,
+        "max_video": 34
+    }
+]
