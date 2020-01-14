@@ -30,7 +30,10 @@ class FeatureExtractor:
                 stvi_frame = self.stvi_data.labels_to_falsecolor(self.stvi_data.stvis[:, :, frame_idx])
                 self.plotFrame(np.hstack((img_as_ubyte(max_contour_frame), img_as_ubyte(stvi_frame))))
 
-            self.feature_vectors[frame_idx, :] = self.extractScalarFeatures(contours)
+            if len(contours):
+                self.feature_vectors[frame_idx, :] = self.extractScalarFeatures(contours)
+            else:
+                self.feature_vectors[frame_idx, :] = np.nan
 
         print('done')
 
