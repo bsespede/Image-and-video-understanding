@@ -115,7 +115,7 @@ if __name__ == '__main__':
 
     app = QApplication(sys.argv)
     engine = QQmlApplicationEngine()
-    engine.load(QUrl.fromLocalFile('gui.qml'))
+    engine.load(QUrl.fromLocalFile('classification-gui.qml'))
 
     _window = engine.rootObjects()[0]
     _window.setResult.connect(setResult)
