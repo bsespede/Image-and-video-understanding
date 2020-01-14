@@ -17,20 +17,22 @@ class FeatureExtractor:
         self.frame_data = []
 
 
-    def processSTVIs(self):
+    def processSTVIs(self, verbose=False, plotting=False):
+        print('Processing...')
         num_frames = self.stvi_data.stvis.shape[2]
         self.feature_vectors = np.zeros((num_frames, self.num_scalar_features_per_stvi))
         # for frame_idx in range(num_frames):
         for frame_idx in range(num_frames):
-            contour_frame, contours = self.framePreprocessing(self.stvi_data.stvis[:, :, frame_idx])
+            contour_frame, contours = self.framePreprocessing(self.stvi_data.stvis[:, :, frame_idx], verbose=verbose)
             # plot frame preprocessing results
-            plotting = True
             if plotting:
                 max_contour_frame = np.maximum(contour_frame, self.stvi_data.stvis[:, :, frame_idx, np.newaxis])
                 stvi_frame = self.stvi_data.labels_to_falsecolor(self.stvi_data.stvis[:, :, frame_idx])
                 self.plotFrame(np.hstack((img_as_ubyte(max_contour_frame), img_as_ubyte(stvi_frame))))
 
             self.feature_vectors[frame_idx, :] = self.extractScalarFeatures(contours)
+
+        print('done')
 
     def exportFeatureVector(self, feature_file_path):
         """Save feature vectors to pkl file at given path/filename"""
@@ -52,6 +54,8 @@ class FeatureExtractor:
 
         num_selected_contours = 3
         max_contour_idxs = contour_areas.argsort()[::-1][:num_selected_contours]
+        if verbose == True:
+            print('max_contour_idxs:', max_contour_idxs)
 
         for contour_idx in range(len(contours)):
             if contour_idx in max_contour_idxs:

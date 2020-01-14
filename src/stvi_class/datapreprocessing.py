@@ -35,6 +35,7 @@ class DataProcessor:
     def processVideo(self, video_name):
         """Load preprocess given video"""
 
+        print('Loading...')
         full_path = self.stv_path + '/' + video_name
         if os.path.isfile(full_path):
             self.current_video_name = full_path
@@ -42,6 +43,7 @@ class DataProcessor:
             raise RuntimeError('Invalid path ' + full_path)
 
         with open(self.current_video_name, 'rb') as handle:
+            del(self.data)
             self.data = pickle.load(handle)
             self.name = self.data['Name']
             self.images = self.data['Images']
@@ -50,6 +52,7 @@ class DataProcessor:
             # self.masks = self.data['Masks']
             # self.bounding_boxes = self.data['BoundingBoxes']
             self.stvis = self.data['STVIs']
+        print('done')
 
     def plot_slider_sequence(self, sequence, window_title, frame_number):
         def on_trackbar(val):
