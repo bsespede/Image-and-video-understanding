@@ -45,10 +45,10 @@ class DataProcessor:
             self.data = pickle.load(handle)
             self.name = self.data['Name']
             self.images = self.data['Images']
-            self.optflow = self.data['OpticalFlow']
-            self.optflow_mag = np.linalg.norm(self.optflow, axis=3)
-            self.masks = self.data['Masks']
-            self.bounding_boxes = self.data['BoundingBoxes']
+            # self.optflow = self.data['OpticalFlow']
+            # self.optflow_mag = np.linalg.norm(self.optflow, axis=3)
+            # self.masks = self.data['Masks']
+            # self.bounding_boxes = self.data['BoundingBoxes']
             self.stvis = self.data['STVIs']
 
     def plot_slider_sequence(self, sequence, window_title, frame_number):
