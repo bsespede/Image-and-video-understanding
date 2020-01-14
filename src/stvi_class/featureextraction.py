@@ -7,7 +7,6 @@ from skimage import img_as_ubyte
 class FeatureExtractor:
     """Extract scalar features framewise from STVIs"""
 
-    stvi_data = []
     num_scalar_features_per_stvi = 6
 
     def __init__(self, stvi_data):

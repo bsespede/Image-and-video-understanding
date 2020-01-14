@@ -13,11 +13,11 @@ class DataProcessor:
     Loads the Space-Time Volume of interest data resulting from Filip Ilic
     """
 
-    data = []
 
     def __init__(self, stv_path):
         """ :param stvPath: base path to STV data"""
 
+        self.data = []
         self.current_video_name = ""
         self.name = []
         self.images = []
