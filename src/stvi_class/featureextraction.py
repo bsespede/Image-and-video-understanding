@@ -47,6 +47,9 @@ class FeatureExtractor:
             print("Number of extracted contours ", len(contours))
         contour_frame = np.zeros_like(self.stvi_data.labels_to_falsecolor(stvi_frame_cp))
 
+        if len(contours) == 0:
+            return contour_frame, ()
+
         # find largest area contours
         contour_areas = np.zeros(len(contours))
         for idx, contour in enumerate(contours):
@@ -114,7 +117,8 @@ class FeatureExtractor:
             if verbose == True:
                 print("merge_condition: ", merge_condition, " (", contour_areas[max_contour_idxs] / reference_contour_area, ", ", num_matching_ids / reference_num_ids, ")")
             contour_idxs_to_merge = np.argwhere(merge_condition)
-            merged_contour = np.vstack([contours[idx] for idx in max_contour_idxs[contour_idxs_to_merge.flatten()]])
+            if merge_condition.any():
+                merged_contour = np.vstack([contours[idx] for idx in max_contour_idxs[contour_idxs_to_merge.flatten()]])
 
             cv2.drawContours(contour_frame, merged_contour, -1, color=(255, 0, 0), thickness=1)
 
