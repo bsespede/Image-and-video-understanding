@@ -1,5 +1,6 @@
 import numpy as np
 import cv2
+import matplotlib.pyplot as plt
 import pdb
 from skimage import img_as_ubyte
 
@@ -15,19 +16,27 @@ class FeatureExtractor:
         self.stvi_data = stvi_data
         self.feature_vectors = []
         self.frame_data = []
+        self.feature_plot_figure = plt.figure(1)
+        self.feature_plot_axis = self.feature_plot_figure.add_subplot(1,1,1)
 
 
     def processSTVIs(self, verbose=False, plotting=False):
         print('Processing...')
         num_frames = self.stvi_data.stvis.shape[2]
         self.feature_vectors = np.zeros((num_frames, self.num_scalar_features_per_stvi))
-        # for frame_idx in range(num_frames):
+
+        if plotting:
+            plt.ioff()
+            self.feature_plot_axis.grid()
+            self.feature_plot_figure.show()
+
         for frame_idx in range(num_frames):
             contour_frame, contours = self.framePreprocessing(self.stvi_data.stvis[:, :, frame_idx], verbose=verbose)
             # plot frame preprocessing results
             if plotting:
                 max_contour_frame = np.maximum(contour_frame, self.stvi_data.stvis[:, :, frame_idx, np.newaxis])
                 stvi_frame = self.stvi_data.labels_to_falsecolor(self.stvi_data.stvis[:, :, frame_idx])
+                self.plotFeatureVector(frame_idx)
                 self.plotFrame(np.hstack((img_as_ubyte(max_contour_frame), img_as_ubyte(stvi_frame))))
 
             if len(contours):
@@ -35,11 +44,26 @@ class FeatureExtractor:
             else:
                 self.feature_vectors[frame_idx, :] = np.nan
 
+        if plotting:
+            plt.close(self.feature_plot_figure)
+
         print('done')
 
     def exportFeatureVector(self, feature_file_path):
         """Save feature vectors to pkl file at given path/filename"""
         ...
+
+    def plotFeatureVector(self, maxFrame=[]):
+        self.feature_plot_axis.set_color_cycle(['red', 'green', 'blue', 'yellow', 'orange', 'black'])
+        if maxFrame == []:
+            self.feature_plot_axis.plot(self.feature_vectors)
+        else:
+            self.feature_plot_axis.plot(self.feature_vectors[0:maxFrame,:])
+        self.feature_plot_axis.legend(('Hu 0', 'Hu 1', 'Hu 2', 'Hu 3', 'Hu 4', 'Hu 5'))
+        self.feature_plot_axis.set_xlabel('Frame')
+        self.feature_plot_axis.set_ylabel('Scalar Features')
+        self.feature_plot_figure.canvas.draw()
+
 
     def framePreprocessing(self, stvi_frame, verbose=False):
         stvi_frame_cp = stvi_frame.copy()
