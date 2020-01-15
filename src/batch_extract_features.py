@@ -1,7 +1,8 @@
 from stvi_class.datapreprocessing import DataProcessor
 from stvi_class.featureextraction import FeatureExtractor
 import json
-import sys
+import numpy as np
+# import sys
 
 dps = DataProcessor('../data/processed_kept/')
 fet = FeatureExtractor(dps)
