@@ -46,7 +46,7 @@ class DataProcessor:
             del(self.data)
             self.data = pickle.load(handle)
             self.name = self.data['Name']
-            self.images = self.data['Images']
+            # self.images = self.data['Images']
             # self.optflow = self.data['OpticalFlow']
             # self.optflow_mag = np.linalg.norm(self.optflow, axis=3)
             # self.masks = self.data['Masks']

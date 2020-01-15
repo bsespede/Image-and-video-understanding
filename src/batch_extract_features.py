@@ -4,7 +4,7 @@ import json
 import numpy as np
 # import sys
 
-dps = DataProcessor('../data/processed_kept/')
+dps = DataProcessor('../data/processed_kept/keep/')
 fet = FeatureExtractor(dps)
 
 with open("../data/processed_kept/labelling_results.json", "r") as read_file:
