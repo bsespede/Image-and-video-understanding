@@ -26,9 +26,7 @@ class FeatureExtractor:
         self.feature_vectors = np.zeros((num_frames, self.num_scalar_features_per_stvi))
 
         if plotting:
-            plt.ioff()
-            self.feature_plot_axis.grid()
-            self.feature_plot_figure.show()
+            self.setupPlotFigure()
 
         for frame_idx in range(num_frames):
             contour_frame, contours = self.framePreprocessing(self.stvi_data.stvis[:, :, frame_idx], verbose=verbose)
@@ -52,6 +50,11 @@ class FeatureExtractor:
     def exportFeatureVector(self, feature_file_path):
         """Save feature vectors to pkl file at given path/filename"""
         ...
+
+    def setupPlotFigure(self):
+        plt.ioff()
+        self.feature_plot_axis.grid()
+        self.feature_plot_figure.show()
 
     def plotFeatureVector(self, maxFrame=[]):
         self.feature_plot_axis.set_color_cycle(['red', 'green', 'blue', 'yellow', 'orange', 'black'])
