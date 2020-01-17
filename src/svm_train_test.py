@@ -40,10 +40,11 @@ if __name__ == '__main__':
 
     # train svm
     svm = cv.ml.SVM_create()
-    svm.setType(cv.ml.SVM_C_SVC)
-    svm.setKernel(cv.ml.SVM_LINEAR) # TODO: try other interpolation methods
-    svm.setTermCriteria((cv.TERM_CRITERIA_MAX_ITER, 100, 1e-6))
-    svm.train(trainingData, cv.ml.ROW_SAMPLE, trainingLabels)
+    svm.setType(cv.ml.SVM_NU_SVC)
+    svm.setKernel(cv.ml.SVM_RBF) # TODO: try other interpolation methods
+    svm.setNu(0.1)
+    svm.setTermCriteria((cv.TERM_CRITERIA_MAX_ITER, int(1e3), 1e-3))
+    svm.trainAuto(trainingData, cv.ml.ROW_SAMPLE, trainingLabels)
 
     # test related
     totalTestPikes = int(pikeFrames * trainPercentage)
