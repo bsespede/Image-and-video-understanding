@@ -9,7 +9,7 @@ if __name__ == '__main__':
     tuckData = np.load('hu_moments/traindata_tuck.npy')
 
     # general stuff
-    trainPercentage = 0.3 #TODO: when increasing it always predicts  straights, data is unbalanced
+    trainPercentage = 0.9 #TODO: when increasing it always predicts  straights, data is unbalanced
     pikeFrames, pikeFeatures = pikeData.shape
     straightFrames, straightFeatures = straightData.shape
     tuckFrames, tuckFeatures = tuckData.shape
@@ -32,6 +32,11 @@ if __name__ == '__main__':
     trainingData = np.copy(pikeTrainingData)
     trainingData = np.append(trainingData, straightTrainingData, axis=0)
     trainingData = np.append(trainingData, tuckTrainingData, axis=0)
+
+    # randomize
+    idxs = np.random.permutation(trainingData.shape[0])
+    trainingData = trainingData[idxs]
+    trainingLabels = trainingLabels.transpose()[idxs]
 
     # train svm
     svm = cv.ml.SVM_create()
