@@ -170,7 +170,7 @@ class FeatureExtractor:
 
     def extractScalarFeatures(self, contour, verbose=False):
         contour_frame = np.zeros(self.stvi_data.stvis.shape[0:2])
-        cv2.drawContours(contour_frame, contour, -1, color=(255, 255, 255), thickness=2)
+        cv2.drawContours(contour_frame, contour, -1, color=(255, 255, 255), thickness=cv2.FILLED)
         hu_moments = cv2.HuMoments(cv2.moments(contour_frame)).flatten()
         log_hu_moments = np.log(np.abs(hu_moments))
         if verbose == True:
