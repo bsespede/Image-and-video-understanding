@@ -46,6 +46,30 @@ if __name__ == '__main__':
     svm.setTermCriteria((cv.TERM_CRITERIA_MAX_ITER, int(1e3), 1e-3))
     svm.trainAuto(trainingData, cv.ml.ROW_SAMPLE, trainingLabels)
 
+    # train accuracy
+    confusionMatrixTrain = np.zeros((3, 3), dtype=np.int64)
+
+    for pikeFeatureVector in pikeTrainingData:
+        response = svm.predict(pikeFeatureVector.reshape((1, pikeFeatures)))[1]
+        convertedResponse = int(response[0][0])
+        confusionMatrixTrain[0, convertedResponse] += 1
+
+    for straightFeatureVector in straightTrainingData:
+        response = svm.predict(straightFeatureVector.reshape((1, straightFeatures)))[1]
+        convertedResponse = int(response[0][0])
+        confusionMatrixTrain[1, convertedResponse] += 1
+
+    for tuckFeatureVector in tuckTrainingData:
+        response = svm.predict(tuckFeatureVector.reshape((1, tuckFeatures)))[1]
+        convertedResponse = int(response[0][0])
+        confusionMatrixTrain[2, convertedResponse] += 1
+
+    print("Confusion matrix (train):\n", confusionMatrixTrain) # indices of conf matrix: 0 pike, 1 straight, 2 tuck
+    np.save('confusion_matrix_train.npy', confusionMatrixTrain)
+
+    classificationAccuracyTrain = np.diagonal(confusionMatrixTrain) / np.sum(confusionMatrixTrain, axis=1)
+    print('Classification accuracy (train): ', classificationAccuracyTrain)
+
     # test related
     totalTestPikes = int(pikeFrames * trainPercentage)
     totalTestStraights = int(straightFrames * trainPercentage)
@@ -73,6 +97,11 @@ if __name__ == '__main__':
         convertedResponse = int(response[0][0])
         confusionMatrix[2, convertedResponse] += 1
 
-    print("Confusion matrix:", confusionMatrix) # indices of conf matrix: 0 pike, 1 straight, 2 tuck
+    print("Confusion matrix:\n", confusionMatrix) # indices of conf matrix: 0 pike, 1 straight, 2 tuck
     np.save('confusion_matrix.npy', confusionMatrix)
+
+    classificationAccuracy = np.diagonal(confusionMatrix) / np.sum(confusionMatrix, axis=1)
+    print('Classification accuracy: ', classificationAccuracy)
+
+    svm.save('pose_classifier.svm')
 
