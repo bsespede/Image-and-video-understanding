@@ -33,7 +33,8 @@ for idx, video_file in enumerate(video_files):
     dps.processVideo(video_name)
     fet.processSTVIs(verbose=False)
 
-    nonzero_frames = fet.feature_vectors[~np.isnan(fet.feature_vectors).any(axis=1)]
+    cropped_frames = fet.feature_vectors[start_frame:end_frame]
+    nonzero_frames = cropped_frames[~np.isnan(cropped_frames).any(axis=1)]
 
     if label == label_pike:
         tokenset_pike = np.append(tokenset_pike, np.atleast_2d(nonzero_frames), axis=0)
