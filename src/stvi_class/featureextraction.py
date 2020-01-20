@@ -20,7 +20,7 @@ class FeatureExtractor:
         self.feature_plot_axis = self.feature_plot_figure.add_subplot(1,1,1)
 
 
-    def processSTVIs(self, verbose=False, plotting=False):
+    def processSTVIs(self, verbose=False, plotting=False, labelTrue="", classifier=None, frameRange=None):
         print('Processing...')
         num_frames = self.stvi_data.stvis.shape[2]
         self.feature_vectors = np.zeros((num_frames, self.num_scalar_features_per_stvi))
@@ -30,20 +30,32 @@ class FeatureExtractor:
 
         for frame_idx in range(num_frames):
             contour_frame, contours = self.framePreprocessing(self.stvi_data.stvis[:, :, frame_idx], verbose=verbose)
-            # plot frame preprocessing results
-            if plotting:
-                max_contour_frame = np.maximum(contour_frame, self.stvi_data.stvis[:, :, frame_idx, np.newaxis])
-                stvi_frame = self.stvi_data.labels_to_falsecolor(self.stvi_data.stvis[:, :, frame_idx])
-                self.plotFeatureVector(frame_idx)
-                self.plotFrame(np.hstack((img_as_ubyte(max_contour_frame), img_as_ubyte(stvi_frame))))
-
             if len(contours):
                 self.feature_vectors[frame_idx, :] = self.extractScalarFeatures(contours)
             else:
                 self.feature_vectors[frame_idx, :] = np.nan
 
-        if plotting:
-            plt.close(self.feature_plot_figure)
+            # plot frame preprocessing results
+            if plotting:
+                if classifier:
+                    response = classifier.predict(np.atleast_2d(np.float32(self.feature_vectors[frame_idx, :])))[1]
+                    convertedResponse = int(response[0][0])
+                    labels = ("PIKE", "STR", "TUCK")
+                    labelPredicted = labels[convertedResponse]
+                else:
+                    labelPredicted = "-"
+
+                max_contour_frame = np.maximum(contour_frame, self.stvi_data.stvis[:, :, frame_idx, np.newaxis])
+
+                if frameRange and frame_idx < frameRange[0] or frame_idx > frameRange[1]:
+                    label_true = "-"
+                else:
+                    label_true = labelTrue
+
+                cv2.putText(max_contour_frame, label_true + "/" + labelPredicted, (0, self.stvi_data.stvis.shape[0]), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255))
+                stvi_frame = self.stvi_data.labels_to_falsecolor(self.stvi_data.stvis[:, :, frame_idx])
+                self.plotFeatureVector(frame_idx)
+                self.plotFrame(np.hstack((img_as_ubyte(max_contour_frame), img_as_ubyte(stvi_frame))))
 
         print('done')
 
