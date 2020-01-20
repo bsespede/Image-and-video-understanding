@@ -14,7 +14,7 @@ class DataProcessor:
     """
 
 
-    def __init__(self, stv_path):
+    def __init__(self, stv_path, video_path=""):
         """ :param stvPath: base path to STV data"""
 
         self.data = []
@@ -30,7 +30,13 @@ class DataProcessor:
         if os.path.isdir(stv_path):
             self.stv_path = stv_path
         else:
-            raise RuntimeError('Invalid path ' + stv_path)
+            raise RuntimeError('Invalid STVI path ' + stv_path)
+
+        if os.path.isdir(video_path):
+            self.video_path = video_path
+        else:
+            if video_path:
+                raise RuntimeError('Invalid video path ' + video_path)
 
     def processVideo(self, video_name):
         """Load preprocess given video"""
