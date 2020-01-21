@@ -55,7 +55,15 @@ class FeatureExtractor:
                 cv2.putText(max_contour_frame, label_true + "/" + labelPredicted, (0, self.stvi_data.stvis.shape[0]), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255))
                 stvi_frame = self.stvi_data.labels_to_falsecolor(self.stvi_data.stvis[:, :, frame_idx])
                 self.plotFeatureVector(frame_idx)
-                self.plotFrame(np.hstack((img_as_ubyte(max_contour_frame), img_as_ubyte(stvi_frame))))
+                if hasattr(self.stvi_data, 'video_path'):
+                    plot_img = np.fromstring(self.feature_plot_figure.canvas.tostring_rgb(), dtype='uint8', sep='')
+                    w, h = self.feature_plot_figure.canvas.get_width_height()
+                    plot_img = plot_img.reshape((h, w, 3))
+                    if plot_img.shape != max_contour_frame.shape:
+                        plot_img = img_as_ubyte(np.zeros_like(max_contour_frame))
+                    self.plotFrame(np.vstack((np.hstack((img_as_ubyte(max_contour_frame), img_as_ubyte(stvi_frame))), np.hstack((self.stvi_data.images[:,:,frame_idx,:], plot_img)))))
+                else:
+                    self.plotFrame(np.hstack((img_as_ubyte(max_contour_frame), img_as_ubyte(stvi_frame))))
 
         print('done')
 
