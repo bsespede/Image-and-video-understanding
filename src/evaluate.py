@@ -6,7 +6,7 @@ import json
 def findVideo(videos, video_name):
     return next((item for item in video_files if item["video_name"] == video_name), None)
 
-dps = DataProcessor('../data/processed_kept/keep/')
+dps = DataProcessor('../data/processed_kept/keep/', '../data/Diving48_rgb/rgb')
 fet = FeatureExtractor(dps)
 svm = cv2.ml.SVM_load("./pose_classifier.svm")
 

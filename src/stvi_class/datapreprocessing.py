@@ -3,6 +3,7 @@ import pickle
 import numpy as np
 import matplotlib.pyplot as plt
 import cv2
+import re
 from skimage import img_as_ubyte
 
 
@@ -15,10 +16,13 @@ class DataProcessor:
 
 
     def __init__(self, stv_path, video_path=""):
-        """ :param stvPath: base path to STV data"""
+        """ :param stv_path: base path to STV data
+            :param video_path: base path to videos
+        """
 
         self.data = []
         self.current_video_name = ""
+        self.current_video_path = ""
         self.name = []
         self.images = []
         self.optflow = []
@@ -46,7 +50,17 @@ class DataProcessor:
         if os.path.isfile(full_path):
             self.current_video_name = full_path
         else:
-            raise RuntimeError('Invalid path ' + full_path)
+            raise RuntimeError('Invalid stvi data path ' + full_path)
+
+        if hasattr(self, 'video_path'):
+            video_name_stripped = re.sub("^[^_]*_", "", video_name)
+            video_name_stripped = re.sub(".pkl$", "", video_name_stripped)
+            full_path = self.video_path + '/' + video_name_stripped  + ".mp4"
+            if os.path.isfile(full_path):
+                self.current_video_path = full_path
+            else:
+                raise RuntimeError('Invalid video path ' + full_path)
+
 
         with open(self.current_video_name, 'rb') as handle:
             del(self.data)
@@ -58,6 +72,23 @@ class DataProcessor:
             # self.masks = self.data['Masks']
             # self.bounding_boxes = self.data['BoundingBoxes']
             self.stvis = self.data['STVIs']
+
+        vid = cv2.VideoCapture(self.current_video_path)
+        frameCount = int(vid.get(cv2.CAP_PROP_FRAME_COUNT))
+        frameWidth = int(vid.get(cv2.CAP_PROP_FRAME_WIDTH))
+        frameHeight = int(vid.get(cv2.CAP_PROP_FRAME_HEIGHT))
+
+        buf = np.empty((frameHeight, frameWidth, frameCount, 3), np.dtype('uint8'))
+
+        fc = 0
+        ret = True
+
+        while (fc < frameCount  and ret):
+            ret, buf[:,:,fc,:] = vid.read()
+            fc += 1
+
+        self.images = buf
+
         print('done')
 
     def plot_slider_sequence(self, sequence, window_title, frame_number):
