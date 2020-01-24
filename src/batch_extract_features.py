@@ -38,10 +38,18 @@ for idx, video_file in enumerate(video_files):
 
     if label == label_pike:
         tokenset_pike = np.append(tokenset_pike, np.atleast_2d(nonzero_frames), axis=0)
+        video_ids_pike = np.append(video_ids_pike, idx * np.ones(nonzero_frames.shape[0]))
+        video_labels[idx] = int(0)
     elif label == label_straight:
         tokenset_straight = np.append(tokenset_straight, np.atleast_2d(nonzero_frames), axis=0)
+        video_ids_straight = np.append(video_ids_straight, idx * np.ones(nonzero_frames.shape[0]))
+        video_labels[idx] = int(1)
+
     elif label == label_tuck:
         tokenset_tuck = np.append(tokenset_tuck, np.atleast_2d(nonzero_frames), axis=0)
+        video_ids_tuck = np.append(video_ids_tuck, idx * np.ones(nonzero_frames.shape[0]))
+        video_labels[idx] = int(2)
+
 
     # fet.exportFeatureVector('fts_' + video_name)
     # sys._debugmallocstats()
@@ -50,3 +58,9 @@ for idx, video_file in enumerate(video_files):
 np.save('traindata_pike.npy', tokenset_pike)
 np.save('traindata_straight.npy', tokenset_straight)
 np.save('traindata_tuck.npy', tokenset_tuck)
+
+np.save('video_ids_pike.npy', video_ids_pike)
+np.save('video_ids_straight.npy', video_ids_straight)
+np.save('video_ids_tuck.npy', video_ids_tuck)
+
+np.save('video_labels.npy', video_labels)
