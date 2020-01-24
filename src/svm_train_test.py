@@ -34,9 +34,10 @@ if __name__ == '__main__':
     trainingData = np.append(trainingData, tuckTrainingData, axis=0)
 
     # randomize
-    idxs = np.random.permutation(trainingData.shape[0])
-    trainingData = trainingData[idxs]
-    trainingLabels = trainingLabels.transpose()[idxs]
+    # idxs = np.random.permutation(trainingData.shape[0])
+    # trainingData = trainingData[idxs]
+    # trainingLabels = trainingLabels.transpose()[idxs]
+    # video_ids = video_ids[idxs]
 
     # train svm
     svm = cv.ml.SVM_create()
