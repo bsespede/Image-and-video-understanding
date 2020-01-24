@@ -63,20 +63,28 @@ if __name__ == '__main__':
     # train accuracy
     confusionMatrixTrain = np.zeros((3, 3), dtype=np.int64)
 
-    for pikeFeatureVector in pikeTrainingData:
+    trainingPikeResponse = np.zeros_like(pikeTrainingLabels)
+    for idx, pikeFeatureVector in enumerate(pikeTrainingData):
         response = svm.predict(pikeFeatureVector.reshape((1, pikeFeatures)))[1]
         convertedResponse = int(response[0][0])
+        trainingPikeResponse[0,idx] = convertedResponse
         confusionMatrixTrain[0, convertedResponse] += 1
 
-    for straightFeatureVector in straightTrainingData:
+    trainingStraightResponse = np.zeros_like(straightTrainingLabels)
+    for idx, straightFeatureVector in enumerate(straightTrainingData):
         response = svm.predict(straightFeatureVector.reshape((1, straightFeatures)))[1]
         convertedResponse = int(response[0][0])
+        trainingStraightResponse[0,idx] = convertedResponse
         confusionMatrixTrain[1, convertedResponse] += 1
 
-    for tuckFeatureVector in tuckTrainingData:
+    trainingTuckResponse = np.zeros_like(tuckTrainingLabels)
+    for idx, tuckFeatureVector in enumerate(tuckTrainingData):
         response = svm.predict(tuckFeatureVector.reshape((1, tuckFeatures)))[1]
         convertedResponse = int(response[0][0])
+        trainingTuckResponse[0,idx] = convertedResponse
         confusionMatrixTrain[2, convertedResponse] += 1
+
+    trainingResponse = np.hstack((trainingPikeResponse, trainingStraightResponse, trainingTuckResponse)).transpose()
 
     print("Confusion matrix (train):\n", confusionMatrixTrain) # indices of conf matrix: 0 pike, 1 straight, 2 tuck
     np.save('confusion_matrix_train.npy', confusionMatrixTrain)
@@ -96,6 +104,7 @@ if __name__ == '__main__':
     confusionMatrix = np.zeros((3, 3), dtype=np.int64)
 
     # test svm_svm
+    print("Framewise classification:")
     for pikeFeatureVector in pikeTestData:
         response = svm.predict(pikeFeatureVector.reshape((1, pikeFeatures)))[1]
         convertedResponse = int(response[0][0])
@@ -117,5 +126,20 @@ if __name__ == '__main__':
     classificationAccuracy = np.diagonal(confusionMatrix) / np.sum(confusionMatrix, axis=1)
     print('Classification accuracy: ', classificationAccuracy)
 
-    svm.save('pose_classifier.svm')
+
+    # videowise maximum voting
+    print("\nVideowise classification:")
+
+    training_video_labels = video_labels[np.unique(training_video_ids).astype(int)]
+    training_video_response = np.zeros_like(np.unique(training_video_ids))
+    for idx, video_id in enumerate(np.unique(training_video_ids)):
+        video_frame_idxs = np.argwhere(training_video_ids == video_id)
+        training_video_frame_response = trainingResponse[video_frame_idxs]
+        training_video_response[idx] = np.argmax(np.bincount(training_video_frame_response.flatten()))
+
+    videoClassificationiAccuracyTrain = np.sum(training_video_labels == training_video_response.astype(int)) / len(training_video_response)
+
+    print('Video classification accuracy (train): ', videoClassificationiAccuracyTrain)
+
+    # svm.save('pose_classifier_0p5.svm')
 
