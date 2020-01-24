@@ -4,9 +4,16 @@ import cv2 as cv
 
 if __name__ == '__main__':
     scriptDirectory = os.path.dirname(__file__)
-    pikeData = np.load('hu_moments/traindata_pike.npy')
-    straightData = np.load('hu_moments/traindata_straight.npy')
-    tuckData = np.load('hu_moments/traindata_tuck.npy')
+    pikeData = np.load('hu_moments_0p5/traindata_pike.npy')
+    straightData = np.load('hu_moments_0p5/traindata_straight.npy')
+    tuckData = np.load('hu_moments_0p5/traindata_tuck.npy')
+
+    video_ids_pike = np.load('hu_moments_0p5/video_ids_pike.npy')
+    video_ids_straight =  np.load('hu_moments_0p5/video_ids_straight.npy')
+    video_ids_tuck = np.load('hu_moments_0p5/video_ids_tuck.npy')
+    video_ids = np.hstack((video_ids_pike, video_ids_straight, video_ids_tuck))
+
+    video_labels = np.load('hu_moments_0p5/video_labels.npy')
 
     # general stuff
     trainPercentage = 0.9 #TODO: when increasing it always predicts  straights, data is unbalanced
@@ -28,6 +35,12 @@ if __name__ == '__main__':
     tuckTrainingLabels = np.full((1, totalTrainingTucks), 2, dtype=np.int64)
 
     trainingLabels = np.concatenate((pikeTrainingLabels, straightTrainingLabels, tuckTrainingLabels), axis=1)
+
+    # training_video_ids = video_ids[0:len(trainingLabels.flatten())]
+    training_video_ids_pike = video_ids_pike[0:totalTrainingPikes]
+    training_video_ids_straight = video_ids_straight[0:totalTrainingStraights]
+    training_video_ids_tuck = video_ids_tuck[0:totalTrainingTucks]
+    training_video_ids = np.concatenate((training_video_ids_pike, training_video_ids_straight, training_video_ids_tuck))
 
     trainingData = np.copy(pikeTrainingData)
     trainingData = np.append(trainingData, straightTrainingData, axis=0)
