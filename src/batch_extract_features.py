@@ -23,12 +23,18 @@ label_pike = 'PIKE'
 label_straight = 'STR'
 label_tuck = 'TUCK'
 
-# for idx, video_name in enumerate(videofiles):
+video_ids_pike = np.empty(0)
+video_ids_straight = np.empty(0)
+video_ids_tuck = np.empty(0)
+
+video_labels = np.zeros(num_videos, dtype=int)
+
 for idx, video_file in enumerate(video_files):
     video_name = video_file['video_name'] + '.pkl'
     label = video_file['video_label']
     start_frame = video_file['video_start']
     end_frame = video_file['video_end']
+
     print('Process video (', idx+1, '/', num_videos,  ')', video_name)
     dps.processVideo(video_name)
     fet.processSTVIs(verbose=False)
