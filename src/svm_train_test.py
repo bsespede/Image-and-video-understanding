@@ -36,7 +36,6 @@ if __name__ == '__main__':
 
     trainingLabels = np.concatenate((pikeTrainingLabels, straightTrainingLabels, tuckTrainingLabels), axis=1)
 
-    # training_video_ids = video_ids[0:len(trainingLabels.flatten())]
     training_video_ids_pike = video_ids_pike[0:totalTrainingPikes]
     training_video_ids_straight = video_ids_straight[0:totalTrainingStraights]
     training_video_ids_tuck = video_ids_tuck[0:totalTrainingTucks]
@@ -93,32 +92,53 @@ if __name__ == '__main__':
     print('Classification accuracy (train): ', classificationAccuracyTrain)
 
     # test related
-    totalTestPikes = int(pikeFrames * trainPercentage)
-    totalTestStraights = int(straightFrames * trainPercentage)
-    totalTestTucks = int(tuckFrames * trainPercentage)
 
-    pikeTestData = pikeData[totalTestPikes:, :].astype(np.float32)
-    straightTestData = straightData[totalTestStraights:, :].astype(np.float32)
-    tuckTestData = tuckData[totalTestTucks:, :].astype(np.float32)
+    pikeTestData = pikeData[totalTrainingPikes:, :].astype(np.float32)
+    straightTestData = straightData[totalTrainingStraights:, :].astype(np.float32)
+    tuckTestData = tuckData[totalTrainingTucks:, :].astype(np.float32)
+
+    totalTestPikes = pikeTestData.shape[0]
+    totalTestStraights = straightTestData.shape[0]
+    totalTestTucks = tuckTestData.shape[0]
+
+    pikeTestLabels = np.full((1, totalTestPikes), 0, dtype=np.int64)
+    straightTestLabels = np.full((1, totalTestStraights), 1, dtype=np.int64)
+    tuckTestLabels = np.full((1, totalTestTucks), 2, dtype=np.int64)
+
+    testLabels = np.concatenate((pikeTestLabels, straightTestLabels, tuckTestLabels), axis=1)
+
+    test_video_ids_pike = video_ids_pike[totalTrainingPikes:]
+    test_video_ids_straight = video_ids_straight[totalTrainingStraights:]
+    test_video_ids_tuck = video_ids_tuck[totalTrainingTucks:]
+    test_video_ids = np.concatenate((test_video_ids_pike, test_video_ids_straight, test_video_ids_tuck))
 
     confusionMatrix = np.zeros((3, 3), dtype=np.int64)
 
     # test svm_svm
     print("Framewise classification:")
-    for pikeFeatureVector in pikeTestData:
+
+    testPikeResponse = np.zeros_like(pikeTestLabels)
+    for idx, pikeFeatureVector in enumerate(pikeTestData):
         response = svm.predict(pikeFeatureVector.reshape((1, pikeFeatures)))[1]
         convertedResponse = int(response[0][0])
+        testPikeResponse[0,idx] = convertedResponse
         confusionMatrix[0, convertedResponse] += 1
 
-    for straightFeatureVector in straightTestData:
+    testStraightResponse = np.zeros_like(straightTestLabels)
+    for idx, straightFeatureVector in enumerate(straightTestData):
         response = svm.predict(straightFeatureVector.reshape((1, straightFeatures)))[1]
         convertedResponse = int(response[0][0])
+        testStraightResponse[0,idx] = convertedResponse
         confusionMatrix[1, convertedResponse] += 1
 
-    for tuckFeatureVector in tuckTestData:
+    testTuckResponse = np.zeros_like(tuckTestLabels)
+    for idx, tuckFeatureVector in enumerate(tuckTestData):
         response = svm.predict(tuckFeatureVector.reshape((1, tuckFeatures)))[1]
         convertedResponse = int(response[0][0])
+        testTuckResponse[0,idx] = convertedResponse
         confusionMatrix[2, convertedResponse] += 1
+
+    testResponse = np.hstack((testPikeResponse, testStraightResponse, testTuckResponse)).transpose()
 
     print("Confusion matrix:\n", confusionMatrix) # indices of conf matrix: 0 pike, 1 straight, 2 tuck
     np.save('confusion_matrix.npy', confusionMatrix)
@@ -140,6 +160,17 @@ if __name__ == '__main__':
     videoClassificationiAccuracyTrain = np.sum(training_video_labels == training_video_response.astype(int)) / len(training_video_response)
 
     print('Video classification accuracy (train): ', videoClassificationiAccuracyTrain)
+
+    test_video_labels = video_labels[np.unique(test_video_ids).astype(int)]
+    test_video_response = np.zeros_like(np.unique(test_video_ids))
+    for idx, video_id in enumerate(np.unique(test_video_ids)):
+        video_frame_idxs = np.argwhere(test_video_ids == video_id)
+        test_video_frame_response = testResponse[video_frame_idxs]
+        test_video_response[idx] = np.argmax(np.bincount(test_video_frame_response.flatten()))
+
+    videoClassificationiAccuracy = np.sum(test_video_labels == test_video_response.astype(int)) / len(test_video_response)
+
+    print('Video classification accuracy: ', videoClassificationiAccuracy)
 
     # svm.save('pose_classifier_0p5.svm')
 
