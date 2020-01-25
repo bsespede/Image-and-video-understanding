@@ -185,9 +185,9 @@ def trainAndTest(featurePath='.', randomizeData=True, filterFeatures=True):
         training_video_frame_response = trainingResponse[video_frame_idxs]
         training_video_response[idx] = np.argmax(np.bincount(training_video_frame_response.flatten()))
 
-    videoClassificationiAccuracyTrain = np.sum(training_video_labels == training_video_response.astype(int)) / len(training_video_response)
+    videoClassificationAccuracyTrain = np.sum(training_video_labels == training_video_response.astype(int)) / len(training_video_response)
 
-    print('Video classification accuracy (train): ', videoClassificationiAccuracyTrain)
+    print('Video classification accuracy (train): ', videoClassificationAccuracyTrain)
 
     test_video_labels = video_labels[np.unique(test_video_ids).astype(int)]
     test_video_response = np.zeros_like(np.unique(test_video_ids))
@@ -196,8 +196,8 @@ def trainAndTest(featurePath='.', randomizeData=True, filterFeatures=True):
         test_video_frame_response = testResponse[video_frame_idxs]
         test_video_response[idx] = np.argmax(np.bincount(test_video_frame_response.flatten()))
 
-    videoClassificationiAccuracy = np.sum(test_video_labels == test_video_response.astype(int)) / len(test_video_response)
+    videoClassificationAccuracy = np.sum(test_video_labels == test_video_response.astype(int)) / len(test_video_response)
 
-    print('Video classification accuracy: ', videoClassificationiAccuracy)
+    print('Video classification accuracy: ', videoClassificationAccuracy)
 
     # svm.save('pose_classifier.svm')
