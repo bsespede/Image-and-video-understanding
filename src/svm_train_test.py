@@ -3,44 +3,46 @@ import numpy as np
 import cv2 as cv
 from scipy.signal import medfilt
 
-if __name__ == '__main__':
+def trainAndTest(featurePath='.', randomizeData=True, filterFeatures=True):
     scriptDirectory = os.path.dirname(__file__)
-    pikeData = np.load('hu_moments_0p5/traindata_pike.npy')
-    straightData = np.load('hu_moments_0p5/traindata_straight.npy')
-    tuckData = np.load('hu_moments_0p5/traindata_tuck.npy')
+    pikeData = np.load(featurePath + '/traindata_pike.npy')
+    straightData = np.load(featurePath + '/traindata_straight.npy')
+    tuckData = np.load(featurePath + '/traindata_tuck.npy')
     allData = np.vstack((pikeData, straightData, tuckData))
 
-    video_ids_pike = np.load('hu_moments_0p5/video_ids_pike.npy')
-    video_ids_straight =  np.load('hu_moments_0p5/video_ids_straight.npy')
-    video_ids_tuck = np.load('hu_moments_0p5/video_ids_tuck.npy')
+    video_ids_pike = np.load(featurePath + '/video_ids_pike.npy')
+    video_ids_straight =  np.load(featurePath + '/video_ids_straight.npy')
+    video_ids_tuck = np.load(featurePath + '/video_ids_tuck.npy')
     video_ids = np.hstack((video_ids_pike, video_ids_straight, video_ids_tuck))
 
-    video_labels = np.load('hu_moments_0p5/video_labels.npy')
+    video_labels = np.load(featurePath + '/video_labels.npy')
 
     # filter in feature space
-    filter_kernel_size = 9
-    for video_id in np.unique(video_ids):
-        video_frame_idxs = np.argwhere(video_ids.astype(int) == video_id.astype(int)).flatten()
-        video_frame_features = allData[video_frame_idxs,:]
-        video_frame_features_filtered = np.zeros_like(video_frame_features.transpose())
-        for idx, video_frame_feature in enumerate(video_frame_features.transpose()):
-            video_frame_features_filtered[idx,:] = medfilt(video_frame_feature, filter_kernel_size)
-        allData[video_frame_idxs,:] = video_frame_features_filtered.transpose()
+    if filterFeatures:
+        filter_kernel_size = 9
+        for video_id in np.unique(video_ids):
+            video_frame_idxs = np.argwhere(video_ids.astype(int) == video_id.astype(int)).flatten()
+            video_frame_features = allData[video_frame_idxs,:]
+            video_frame_features_filtered = np.zeros_like(video_frame_features.transpose())
+            for idx, video_frame_feature in enumerate(video_frame_features.transpose()):
+                video_frame_features_filtered[idx,:] = medfilt(video_frame_feature, filter_kernel_size)
+            allData[video_frame_idxs,:] = video_frame_features_filtered.transpose()
 
-    [pikeData, straightData, tuckData] = np.split(allData, [len(video_ids_pike), len(video_ids_pike)+len(video_ids_straight)])
+        [pikeData, straightData, tuckData] = np.split(allData, [len(video_ids_pike), len(video_ids_pike)+len(video_ids_straight)])
 
     # randomly shuffle data
-    idxs_pike = np.random.permutation(pikeData.shape[0])
-    pikeData = pikeData[idxs_pike]
-    video_ids_pike = video_ids_pike[idxs_pike]
+    if randomizeData:
+        idxs_pike = np.random.permutation(pikeData.shape[0])
+        pikeData = pikeData[idxs_pike]
+        video_ids_pike = video_ids_pike[idxs_pike]
 
-    idxs_straight = np.random.permutation(straightData.shape[0])
-    straightData = straightData[idxs_straight]
-    video_ids_straight = video_ids_straight[idxs_straight]
+        idxs_straight = np.random.permutation(straightData.shape[0])
+        straightData = straightData[idxs_straight]
+        video_ids_straight = video_ids_straight[idxs_straight]
 
-    idxs_tuck = np.random.permutation(tuckData.shape[0])
-    tuckData = tuckData[idxs_tuck]
-    video_ids_tuck = video_ids_tuck[idxs_tuck]
+        idxs_tuck = np.random.permutation(tuckData.shape[0])
+        tuckData = tuckData[idxs_tuck]
+        video_ids_tuck = video_ids_tuck[idxs_tuck]
 
     # general stuff
     trainPercentage = 0.9
@@ -198,5 +200,4 @@ if __name__ == '__main__':
 
     print('Video classification accuracy: ', videoClassificationiAccuracy)
 
-    # svm.save('pose_classifier_0p5.svm')
-
+    # svm.save('pose_classifier.svm')
