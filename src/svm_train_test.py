@@ -83,10 +83,11 @@ if __name__ == '__main__':
     svm.setType(cv.ml.SVM_NU_SVC)
     svm.setKernel(cv.ml.SVM_RBF) # TODO: try other interpolation methods
     svm.setNu(0.1)
-    svm.setTermCriteria((cv.TERM_CRITERIA_MAX_ITER, int(1e3), 1e-3))
+    svm.setTermCriteria((cv.TERM_CRITERIA_EPS, int(5e3), 1e-3))
     svm.trainAuto(trainingData, cv.ml.ROW_SAMPLE, trainingLabels)
 
     # train accuracy
+    print("Framewise classification:")
     confusionMatrixTrain = np.zeros((3, 3), dtype=np.int64)
 
     trainingPikeResponse = np.zeros_like(pikeTrainingLabels)
@@ -113,7 +114,7 @@ if __name__ == '__main__':
     trainingResponse = np.hstack((trainingPikeResponse, trainingStraightResponse, trainingTuckResponse)).transpose()
 
     print("Confusion matrix (train):\n", confusionMatrixTrain) # indices of conf matrix: 0 pike, 1 straight, 2 tuck
-    np.save('confusion_matrix_train.npy', confusionMatrixTrain)
+    # np.save('confusion_matrix_train.npy', confusionMatrixTrain)
 
     classificationAccuracyTrain = np.diagonal(confusionMatrixTrain) / np.sum(confusionMatrixTrain, axis=1)
     print('Classification accuracy (train): ', classificationAccuracyTrain)
@@ -142,8 +143,6 @@ if __name__ == '__main__':
     confusionMatrix = np.zeros((3, 3), dtype=np.int64)
 
     # test svm_svm
-    print("Framewise classification:")
-
     testPikeResponse = np.zeros_like(pikeTestLabels)
     for idx, pikeFeatureVector in enumerate(pikeTestData):
         response = svm.predict(pikeFeatureVector.reshape((1, pikeFeatures)))[1]
@@ -168,7 +167,7 @@ if __name__ == '__main__':
     testResponse = np.hstack((testPikeResponse, testStraightResponse, testTuckResponse)).transpose()
 
     print("Confusion matrix:\n", confusionMatrix) # indices of conf matrix: 0 pike, 1 straight, 2 tuck
-    np.save('confusion_matrix.npy', confusionMatrix)
+    # np.save('confusion_matrix.npy', confusionMatrix)
 
     classificationAccuracy = np.diagonal(confusionMatrix) / np.sum(confusionMatrix, axis=1)
     print('Classification accuracy: ', classificationAccuracy)
@@ -180,7 +179,7 @@ if __name__ == '__main__':
     training_video_labels = video_labels[np.unique(training_video_ids).astype(int)]
     training_video_response = np.zeros_like(np.unique(training_video_ids))
     for idx, video_id in enumerate(np.unique(training_video_ids)):
-        video_frame_idxs = np.argwhere(training_video_ids == video_id)
+        video_frame_idxs = np.argwhere(training_video_ids.astype(int) == video_id.astype(int))
         training_video_frame_response = trainingResponse[video_frame_idxs]
         training_video_response[idx] = np.argmax(np.bincount(training_video_frame_response.flatten()))
 
@@ -191,7 +190,7 @@ if __name__ == '__main__':
     test_video_labels = video_labels[np.unique(test_video_ids).astype(int)]
     test_video_response = np.zeros_like(np.unique(test_video_ids))
     for idx, video_id in enumerate(np.unique(test_video_ids)):
-        video_frame_idxs = np.argwhere(test_video_ids == video_id)
+        video_frame_idxs = np.argwhere(test_video_ids.astype(int) == video_id.astype(int))
         test_video_frame_response = testResponse[video_frame_idxs]
         test_video_response[idx] = np.argmax(np.bincount(test_video_frame_response.flatten()))
 
