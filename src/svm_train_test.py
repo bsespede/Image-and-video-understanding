@@ -201,3 +201,46 @@ def trainAndTest(featurePath='.', randomizeData=True, filterFeatures=True):
     print('Video classification accuracy: ', videoClassificationAccuracy)
 
     # svm.save('pose_classifier.svm')
+
+    return classificationAccuracyTrain, classificationAccuracy,\
+        confusionMatrixTrain, confusionMatrix,\
+        videoClassificationAccuracyTrain, videoClassificationAccuracy
+
+
+if __name__ == '__main__':
+    numRuns = 30
+    featurePath = './'
+
+    batch_classificationAccuracyTrain = np.zeros((numRuns, 3))
+    batch_classificationAccuracy = np.zeros((numRuns, 3))
+    batch_confusionMatrixTrain = np.zeros((numRuns, 3, 3), dtype=np.int64)
+    batch_confusionMatrix = np.zeros((numRuns, 3, 3), dtype=np.int64)
+    batch_videoClassificationAccuracyTrain = np.zeros((numRuns))
+    batch_videoClassificationAccuracy = np.zeros((numRuns))
+
+    for runNr in range(numRuns):
+        print('======== Run', runNr, '========')
+        classificationAccuracyTrain, classificationAccuracy,\
+        confusionMatrixTrain, confusionMatrix,\
+        videoClassificationAccuracyTrain, videoClassificationAccuracy\
+        = trainAndTest(featurePath)
+        batch_classificationAccuracyTrain[runNr,:] = classificationAccuracyTrain
+        batch_classificationAccuracy[runNr,:] = classificationAccuracy
+        batch_confusionMatrixTrain[runNr,:,:] = confusionMatrixTrain
+        batch_confusionMatrix[runNr,:,:] = confusionMatrix
+        batch_videoClassificationAccuracyTrain[runNr] = videoClassificationAccuracyTrain
+        batch_videoClassificationAccuracy[runNr] = videoClassificationAccuracy
+
+    mean_classificationAccuracyTrain = np.mean(batch_classificationAccuracyTrain, axis=0)
+    mean_classificationAccuracy = np.mean(batch_classificationAccuracy, axis=0)
+    mean_confusionMatrixTrain = np.mean(batch_confusionMatrixTrain, axis=0)
+    mean_confusionMatrix = np.mean(batch_confusionMatrix, axis=0)
+    mean_videoClassificationAccuracyTrain = np.mean(batch_videoClassificationAccuracyTrain, axis=0)
+    mean_videoClassificationAccuracy = np.mean(batch_videoClassificationAccuracy, axis=0)
+
+    print('======== Overall Runs', numRuns, '========')
+    print('classificationAccuracy: ', mean_classificationAccuracy)
+    print('confusionMatrixTrain:\n', mean_confusionMatrixTrain)
+    print('confusionMatrix:\n', mean_confusionMatrix)
+    print('videoClassificationAccuracyTrain: ', mean_videoClassificationAccuracyTrain)
+    print('videoClassificationAccuracy: ', mean_videoClassificationAccuracy)
