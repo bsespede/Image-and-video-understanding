@@ -157,7 +157,7 @@ class FeatureExtractor:
             print("num matching ids: ", num_matching_ids)
 
         # merge contours based on STVI IDs, relative size (and proximity TODO?)
-        min_relative_area = 0.66
+        min_relative_area = 0.55
         min_matching_ids = 0.66
         reference_contour_area = contour_areas[max_contour_idxs[0]]
         reference_num_ids = len(reference_ids) #sum(stvi_id_histograms[0,:] > 0)

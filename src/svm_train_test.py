@@ -1,12 +1,14 @@
 import os
 import numpy as np
 import cv2 as cv
+from scipy.signal import medfilt
 
 if __name__ == '__main__':
     scriptDirectory = os.path.dirname(__file__)
     pikeData = np.load('hu_moments_0p5/traindata_pike.npy')
     straightData = np.load('hu_moments_0p5/traindata_straight.npy')
     tuckData = np.load('hu_moments_0p5/traindata_tuck.npy')
+    allData = np.vstack((pikeData, straightData, tuckData))
 
     video_ids_pike = np.load('hu_moments_0p5/video_ids_pike.npy')
     video_ids_straight =  np.load('hu_moments_0p5/video_ids_straight.npy')
@@ -15,6 +17,17 @@ if __name__ == '__main__':
 
     video_labels = np.load('hu_moments_0p5/video_labels.npy')
 
+    # filter in feature space
+    filter_kernel_size = 9
+    for video_id in np.unique(video_ids):
+        video_frame_idxs = np.argwhere(video_ids.astype(int) == video_id.astype(int)).flatten()
+        video_frame_features = allData[video_frame_idxs,:]
+        video_frame_features_filtered = np.zeros_like(video_frame_features.transpose())
+        for idx, video_frame_feature in enumerate(video_frame_features.transpose()):
+            video_frame_features_filtered[idx,:] = medfilt(video_frame_feature, filter_kernel_size)
+        allData[video_frame_idxs,:] = video_frame_features_filtered.transpose()
+
+    [pikeData, straightData, tuckData] = np.split(allData, [len(video_ids_pike), len(video_ids_pike)+len(video_ids_straight)])
     # general stuff
     trainPercentage = 0.9 #TODO: when increasing it always predicts  straights, data is unbalanced
     pikeFrames, pikeFeatures = pikeData.shape
