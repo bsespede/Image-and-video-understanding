@@ -28,8 +28,22 @@ if __name__ == '__main__':
         allData[video_frame_idxs,:] = video_frame_features_filtered.transpose()
 
     [pikeData, straightData, tuckData] = np.split(allData, [len(video_ids_pike), len(video_ids_pike)+len(video_ids_straight)])
+
+    # randomly shuffle data
+    idxs_pike = np.random.permutation(pikeData.shape[0])
+    pikeData = pikeData[idxs_pike]
+    video_ids_pike = video_ids_pike[idxs_pike]
+
+    idxs_straight = np.random.permutation(straightData.shape[0])
+    straightData = straightData[idxs_straight]
+    video_ids_straight = video_ids_straight[idxs_straight]
+
+    idxs_tuck = np.random.permutation(tuckData.shape[0])
+    tuckData = tuckData[idxs_tuck]
+    video_ids_tuck = video_ids_tuck[idxs_tuck]
+
     # general stuff
-    trainPercentage = 0.9 #TODO: when increasing it always predicts  straights, data is unbalanced
+    trainPercentage = 0.9
     pikeFrames, pikeFeatures = pikeData.shape
     straightFrames, straightFeatures = straightData.shape
     tuckFrames, tuckFeatures = tuckData.shape
@@ -58,7 +72,7 @@ if __name__ == '__main__':
     trainingData = np.append(trainingData, straightTrainingData, axis=0)
     trainingData = np.append(trainingData, tuckTrainingData, axis=0)
 
-    # randomize
+    # randomize training data
     # idxs = np.random.permutation(trainingData.shape[0])
     # trainingData = trainingData[idxs]
     # trainingLabels = trainingLabels.transpose()[idxs]
