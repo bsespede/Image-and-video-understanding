@@ -7,9 +7,9 @@
    - only male divers (no swimsuit)
    - diver is not occluded
 ** DONE extract in-air frames and prepare folder structure as required by Filip Ilic
-* [1/3] Data preprocessing
+* [2/3] Data preprocessing
 ** DONE Load pkl files from Filip Ilic
-** TODO crop frame sequence to the actual pose
+** DONE crop frame sequence to the actual pose
 ** TODO Artefact removal												:TBD:
 *** Morphological: erosion/opening
 * [4/5] Feature extraction and token selection
@@ -25,16 +25,17 @@
 **** TODO compactness
 **** DONE Hu moments (or absolute Hu moments, due to possible reflection/flipped)
 ** TODO scale all features to range [-1;1]
-* [0/1] Feature space filtering 										:TBD:
-** TODO median filter on individual features
+* [1/1] Feature space filtering 										:TBD:
+** DONE median filter on individual features
 * [0/2] Classification
 ** TODO Conventional ML
-*** TODO Support Vector Machine
+*** DONE Support Vector Machine
 **** autotrain with availible kernel functions
 *** TODO k-Nearest-Neighbors
 ** TODO Neural Networks													:TBD:
 *** Data loading & handling
 **** do random train/test set split up and sequential batch extraction for variable size, OR:
-* [0/2] Evaluation
-** TODO Test accuracy of each class
-** TODO Confusion matrix
+* [3/3] Evaluation
+** DONE Test accuracy of each class
+** DONE Confusion matrix
+** DONE mean/quantiles of accuracies for several runs
