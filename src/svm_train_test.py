@@ -197,9 +197,12 @@ def trainAndTest(featurePath='.', randomizeData=True, filterFeatures=True, savin
         training_video_frame_response = trainingResponse[video_frame_idxs]
         training_video_response[idx] = np.argmax(np.bincount(training_video_frame_response.flatten()))
 
-    videoClassificationAccuracyTrain = np.sum(training_video_labels == training_video_response.astype(int)) / len(training_video_response)
+    videoConfusionMatrixTrain = computeConfusionMatrix(training_video_labels, training_video_response)
+    videoClassificationAccuracyTrain = np.diagonal(videoConfusionMatrixTrain) / np.sum(videoConfusionMatrixTrain, axis=1)
+    videoClassificationAccuracyOverallTrain = np.sum(training_video_labels == training_video_response.astype(int)) / len(training_video_response)
 
     print('Video classification accuracy (train): ', videoClassificationAccuracyTrain)
+    print('Video classification accuracy overall (train): ', videoClassificationAccuracyOverallTrain)
 
     test_video_labels = video_labels[np.unique(test_video_ids).astype(int)]
     test_video_response = np.zeros_like(np.unique(test_video_ids))
@@ -208,16 +211,21 @@ def trainAndTest(featurePath='.', randomizeData=True, filterFeatures=True, savin
         test_video_frame_response = testResponse[video_frame_idxs]
         test_video_response[idx] = np.argmax(np.bincount(test_video_frame_response.flatten()))
 
-    videoClassificationAccuracy = np.sum(test_video_labels == test_video_response.astype(int)) / len(test_video_response)
+    videoConfusionMatrix = computeConfusionMatrix(test_video_labels, test_video_response)
+    videoClassificationAccuracy = np.diagonal(videoConfusionMatrix) / np.sum(videoConfusionMatrix, axis=1)
+    videoClassificationAccuracyOverall = np.sum(test_video_labels == test_video_response.astype(int)) / len(test_video_response)
 
     print('Video classification accuracy: ', videoClassificationAccuracy)
+    print('Video classification accuracy overall: ', videoClassificationAccuracyOverall)
 
     if saving:
         svm.save(featurePath+'pose_classifier.svm')
 
     return classificationAccuracyTrain, classificationAccuracy,\
         confusionMatrixTrain, confusionMatrix,\
-        videoClassificationAccuracyTrain, videoClassificationAccuracy
+        videoClassificationAccuracyTrain, videoClassificationAccuracy,\
+        videoConfusionMatrixTrain, videoConfusionMatrix
+
 
 
 if __name__ == '__main__':
@@ -228,21 +236,26 @@ if __name__ == '__main__':
     batch_classificationAccuracy = np.zeros((numRuns, 3))
     batch_confusionMatrixTrain = np.zeros((numRuns, 3, 3), dtype=np.int64)
     batch_confusionMatrix = np.zeros((numRuns, 3, 3), dtype=np.int64)
-    batch_videoClassificationAccuracyTrain = np.zeros((numRuns))
-    batch_videoClassificationAccuracy = np.zeros((numRuns))
+    batch_videoClassificationAccuracyTrain = np.zeros((numRuns,3))
+    batch_videoClassificationAccuracy = np.zeros((numRuns,3))
+    batch_videoConfusionMatrixTrain = np.zeros((numRuns, 3, 3), dtype=np.int64)
+    batch_videoConfusionMatrix = np.zeros((numRuns, 3, 3), dtype=np.int64)
 
     for runNr in range(numRuns):
         print('======== Run', runNr, '========')
         classificationAccuracyTrain, classificationAccuracy,\
         confusionMatrixTrain, confusionMatrix,\
-        videoClassificationAccuracyTrain, videoClassificationAccuracy\
+        videoClassificationAccuracyTrain, videoClassificationAccuracy,\
+        videoConfusionMatrixTrain, videoConfusionMatrix\
         = trainAndTest(featurePath)
         batch_classificationAccuracyTrain[runNr,:] = classificationAccuracyTrain
         batch_classificationAccuracy[runNr,:] = classificationAccuracy
         batch_confusionMatrixTrain[runNr,:,:] = confusionMatrixTrain
         batch_confusionMatrix[runNr,:,:] = confusionMatrix
-        batch_videoClassificationAccuracyTrain[runNr] = videoClassificationAccuracyTrain
-        batch_videoClassificationAccuracy[runNr] = videoClassificationAccuracy
+        batch_videoClassificationAccuracyTrain[runNr,:] = videoClassificationAccuracyTrain
+        batch_videoClassificationAccuracy[runNr,:] = videoClassificationAccuracy
+        batch_videoConfusionMatrixTrain[runNr,:,:] = videoConfusionMatrixTrain
+        batch_videoConfusionMatrix[runNr,:,:] = videoConfusionMatrix
 
     mean_classificationAccuracyTrain = np.mean(batch_classificationAccuracyTrain, axis=0)
     mean_classificationAccuracy = np.mean(batch_classificationAccuracy, axis=0)
@@ -250,6 +263,8 @@ if __name__ == '__main__':
     mean_confusionMatrix = np.mean(batch_confusionMatrix, axis=0)
     mean_videoClassificationAccuracyTrain = np.mean(batch_videoClassificationAccuracyTrain, axis=0)
     mean_videoClassificationAccuracy = np.mean(batch_videoClassificationAccuracy, axis=0)
+    mean_videoConfusionMatrixTrain = np.mean(batch_videoConfusionMatrixTrain, axis=0)
+    mean_videoConfusionMatrix = np.mean(batch_videoConfusionMatrix, axis=0)
 
     std_classificationAccuracyTrain = np.std(batch_classificationAccuracyTrain, axis=0)
     std_classificationAccuracy = np.std(batch_classificationAccuracy, axis=0)
@@ -257,6 +272,8 @@ if __name__ == '__main__':
     std_confusionMatrix = np.std(batch_confusionMatrix, axis=0)
     std_videoClassificationAccuracyTrain = np.std(batch_videoClassificationAccuracyTrain, axis=0)
     std_videoClassificationAccuracy = np.std(batch_videoClassificationAccuracy, axis=0)
+    std_videoConfusionMatrixTrain = np.std(batch_videoConfusionMatrixTrain, axis=0)
+    std_videoConfusionMatrix = np.std(batch_videoConfusionMatrix, axis=0)
 
     min_classificationAccuracyTrain = np.min(batch_classificationAccuracyTrain, axis=0)
     min_classificationAccuracy = np.min(batch_classificationAccuracy, axis=0)
@@ -264,6 +281,8 @@ if __name__ == '__main__':
     min_confusionMatrix = np.min(batch_confusionMatrix, axis=0)
     min_videoClassificationAccuracyTrain = np.min(batch_videoClassificationAccuracyTrain, axis=0)
     min_videoClassificationAccuracy = np.min(batch_videoClassificationAccuracy, axis=0)
+    min_videoConfusionMatrixTrain = np.min(batch_videoConfusionMatrixTrain, axis=0)
+    min_videoConfusionMatrix = np.min(batch_videoConfusionMatrix, axis=0)
 
     max_classificationAccuracyTrain = np.max(batch_classificationAccuracyTrain, axis=0)
     max_classificationAccuracy = np.max(batch_classificationAccuracy, axis=0)
@@ -271,6 +290,8 @@ if __name__ == '__main__':
     max_confusionMatrix = np.max(batch_confusionMatrix, axis=0)
     max_videoClassificationAccuracyTrain = np.max(batch_videoClassificationAccuracyTrain, axis=0)
     max_videoClassificationAccuracy = np.max(batch_videoClassificationAccuracy, axis=0)
+    max_videoConfusionMatrixTrain = np.max(batch_videoConfusionMatrixTrain, axis=0)
+    max_videoConfusionMatrix = np.max(batch_videoConfusionMatrix, axis=0)
 
     print('======== Overall Runs', numRuns, '========')
     print('classificationAccuracyTrain:\n mean:', mean_classificationAccuracyTrain, '\t std:', std_classificationAccuracyTrain)
@@ -285,6 +306,10 @@ if __name__ == '__main__':
     print(' min:', min_videoClassificationAccuracyTrain, '\t max:', max_videoClassificationAccuracyTrain)
     print('videoClassificationAccuracy:\n mean:', mean_videoClassificationAccuracy, '\t std:', std_videoClassificationAccuracy)
     print(' min:', min_videoClassificationAccuracy, '\t max:', max_videoClassificationAccuracy)
+    print('videoConfusionMatrixTrain:\n mean:\n', mean_videoConfusionMatrixTrain, '\n std:\n', std_videoConfusionMatrixTrain)
+    print(' min:\n', min_videoConfusionMatrixTrain, '\n max:\n', max_videoConfusionMatrixTrain)
+    print('videoConfusionMatrix:\n mean:\n', mean_videoConfusionMatrix, '\n std:\n', std_videoConfusionMatrix)
+    print(' min:\n', min_videoConfusionMatrix, '\n max:\n', max_videoConfusionMatrix)
 
     np.save(featurePath + '/batch_classificationAccuracyTrain.npy', batch_classificationAccuracyTrain)
     np.save(featurePath + '/batch_classificationAccuracy.npy', batch_classificationAccuracy)
@@ -292,3 +317,5 @@ if __name__ == '__main__':
     np.save(featurePath + '/batch_confusionMatrix.npy', batch_confusionMatrix)
     np.save(featurePath + '/batch_videoClassificationAccuracyTrain.npy', batch_videoClassificationAccuracyTrain)
     np.save(featurePath + '/batch_videoClassificationAccuracy.npy', batch_videoClassificationAccuracy)
+    np.save(featurePath + '/batch_videoConfusionMatrixTrain.npy', batch_videoConfusionMatrixTrain)
+    np.save(featurePath + '/batch_videoConfusionMatrix.npy', batch_videoConfusionMatrix)
