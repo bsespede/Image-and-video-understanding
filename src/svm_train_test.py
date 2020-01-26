@@ -3,7 +3,17 @@ import numpy as np
 import cv2 as cv
 from scipy.signal import medfilt
 
-def trainAndTest(featurePath='.', randomizeData=True, filterFeatures=True):
+def computeConfusionMatrix(true_label_data, predicted_label_data):
+    true_labels = np.unique(true_label_data).astype(int)
+    predicted_labels = np.unique(predicted_label_data).astype(int)
+    confusion_matrix = np.zeros((len(true_labels), len(predicted_labels)),dtype=int)
+    for true_idx, true_label in enumerate(true_labels):
+        current_class_idxs = np.argwhere(true_label_data == true_label)
+        for predicted_idx, predicted_label in enumerate(predicted_labels):
+            confusion_matrix[true_idx, predicted_idx] = np.sum(predicted_label_data[current_class_idxs] == predicted_label)
+    return confusion_matrix
+
+def trainAndTest(featurePath='.', randomizeData=True, filterFeatures=True, saving=False):
     scriptDirectory = os.path.dirname(__file__)
     pikeData = np.load(featurePath + '/traindata_pike.npy')
     straightData = np.load(featurePath + '/traindata_straight.npy')
