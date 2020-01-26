@@ -272,3 +272,10 @@ if __name__ == '__main__':
     print(' min:', min_videoClassificationAccuracyTrain, '\t max:', max_videoClassificationAccuracyTrain)
     print('videoClassificationAccuracy:\n mean:', mean_videoClassificationAccuracy, '\t std:', std_videoClassificationAccuracy)
     print(' min:', min_videoClassificationAccuracy, '\t max:', max_videoClassificationAccuracy)
+
+    np.save(featurePath + '/batch_classificationAccuracyTrain.npy', batch_classificationAccuracyTrain)
+    np.save(featurePath + '/batch_classificationAccuracy.npy', batch_classificationAccuracy)
+    np.save(featurePath + '/batch_confusionMatrixTrain.npy', batch_confusionMatrixTrain)
+    np.save(featurePath + '/batch_confusionMatrix.npy', batch_confusionMatrix)
+    np.save(featurePath + '/batch_videoClassificationAccuracyTrain.npy', batch_videoClassificationAccuracyTrain)
+    np.save(featurePath + '/batch_videoClassificationAccuracy.npy', batch_videoClassificationAccuracy)
