@@ -126,7 +126,8 @@ def trainAndTest(featurePath='.', randomizeData=True, filterFeatures=True, savin
     trainingResponse = np.hstack((trainingPikeResponse, trainingStraightResponse, trainingTuckResponse)).transpose()
 
     print("Confusion matrix (train):\n", confusionMatrixTrain) # indices of conf matrix: 0 pike, 1 straight, 2 tuck
-    # np.save('confusion_matrix_train.npy', confusionMatrixTrain)
+    if saving:
+        np.save(featurePath+'confusion_matrix_train.npy', confusionMatrixTrain)
 
     classificationAccuracyTrain = np.diagonal(confusionMatrixTrain) / np.sum(confusionMatrixTrain, axis=1)
     print('Classification accuracy (train): ', classificationAccuracyTrain)
@@ -179,7 +180,8 @@ def trainAndTest(featurePath='.', randomizeData=True, filterFeatures=True, savin
     testResponse = np.hstack((testPikeResponse, testStraightResponse, testTuckResponse)).transpose()
 
     print("Confusion matrix:\n", confusionMatrix) # indices of conf matrix: 0 pike, 1 straight, 2 tuck
-    # np.save('confusion_matrix.npy', confusionMatrix)
+    if saving:
+        np.save(featurePath+'confusion_matrix.npy', confusionMatrix)
 
     classificationAccuracy = np.diagonal(confusionMatrix) / np.sum(confusionMatrix, axis=1)
     print('Classification accuracy: ', classificationAccuracy)
@@ -210,7 +212,8 @@ def trainAndTest(featurePath='.', randomizeData=True, filterFeatures=True, savin
 
     print('Video classification accuracy: ', videoClassificationAccuracy)
 
-    # svm.save('pose_classifier.svm')
+    if saving:
+        svm.save(featurePath+'pose_classifier.svm')
 
     return classificationAccuracyTrain, classificationAccuracy,\
         confusionMatrixTrain, confusionMatrix,\
