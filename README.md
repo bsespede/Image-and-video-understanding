@@ -71,3 +71,17 @@ Feature normalization/centering: could become interesting with the absolute angl
 * fully connected NN on entire feature-over-time sequences
 * RNN ?
 * Cost function: cross entropy
+
+# Code structure #
+
+* Data preprocessing:
+  * `classifying-tool.py`
+  * `visualization-tool.py`
+* Feature extraction:
+  * `batch_extract_features.py`
+* Training:
+  * `svm_train_test.py`
+* Evaluation/visualisation:
+  * `test.py`: run feature extraction on individual video
+  * `evaluate.py`: visualize feature extraction & classification result of individual video
+  * `box_plot_accuracy.py`
